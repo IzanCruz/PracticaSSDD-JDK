@@ -12,6 +12,7 @@
  */
 :root {
   --bs-blue: #0d6efd;
+  --bs-darkblue: #0b052c;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -61,7 +62,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  /*--bs-body-color: #212529;*/
+  --bs-body-color: #c9c9c9;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -99,7 +101,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-darkblue);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -2846,19 +2848,19 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #f4623a;
-  --bs-btn-border-color: #f4623a;
+  --bs-btn-bg: #142039;
+  --bs-btn-border-color: #142039;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #cf5331;
-  --bs-btn-hover-border-color: #c34e2e;
+  --bs-btn-hover-bg: #04060a;
+  --bs-btn-hover-border-color: #142039;
   --bs-btn-focus-shadow-rgb: 246, 122, 88;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #c34e2e;
-  --bs-btn-active-border-color: #b74a2c;
+  --bs-btn-active-bg: #04060a;
+  --bs-btn-active-border-color: #04060a;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #f4623a;
-  --bs-btn-disabled-border-color: #f4623a;
+  --bs-btn-disabled-bg: #323741;
+  --bs-btn-disabled-border-color: #323741;
 }
 
 .btn-secondary {
@@ -10856,7 +10858,7 @@ hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
   margin: 1.5rem auto;
-  background-color: #f4623a;
+  background-color: #04060a;
   opacity: 1;
 }
 
@@ -10926,34 +10928,34 @@ hr.divider-light {
   }
 }
 
-header.masthead {
+header.tophead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/discoteca.jpg");
+  background: linear-gradient(to bottom, rgba(20, 32, 57, 0.8) 0%, rgba(20, 32, 57, 0.8) 100%), url("../assets/img/discoteca.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
-header.masthead h1, header.masthead .h1 {
+header.tophead h1, header.tophead .h1 {
   font-size: 2.25rem;
 }
 @media (min-width: 992px) {
-  header.masthead {
+  header.tophead {
     height: 100vh;
     min-height: 40rem;
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
-  header.masthead p {
+  header.tophead p {
     font-size: 1.15rem;
   }
-  header.masthead h1, header.masthead .h1 {
+  header.tophead h1, header.tophead .h1 {
     font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
-  header.masthead h1, header.masthead .h1 {
+  header.tophead h1, header.tophead .h1 {
     font-size: 3.5rem;
   }
 }
