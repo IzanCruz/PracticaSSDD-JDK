@@ -97,7 +97,7 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: #e4d543;
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -3776,7 +3776,7 @@ textarea.form-control-lg {
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
   color: var(--bs-navbar-color);
-  background-color: transparent;
+  background-color: #6f4a15;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
@@ -10900,8 +10900,8 @@ header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
-  color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  color: #e4e937;
+  background-image: url("../assets/img/header11-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
