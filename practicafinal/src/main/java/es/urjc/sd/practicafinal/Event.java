@@ -5,7 +5,6 @@ public class Event {
     private String name;
     private String description;
     private static int MAX = 200;
-    private int numClients;
 
     public Event(Long id,String name,String description){
         this.id = id;
