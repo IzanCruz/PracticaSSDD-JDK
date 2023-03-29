@@ -61,8 +61,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-color: #f5ea96;
+  --bs-body-bg: #100404;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -97,7 +97,7 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: #e4d543;
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -2812,7 +2812,7 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
+  --bs-btn-color: #000000;
   --bs-btn-bg: #ffc800;
   --bs-btn-border-color: #ffc800;
   --bs-btn-hover-color: #fff;
@@ -3789,7 +3789,7 @@ textarea.form-control-lg {
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
   color: var(--bs-navbar-color);
-  background-color: transparent;
+  background-color: #6f4a15;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
@@ -8058,7 +8058,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #d7e4ef !important;
 }
 
 .text-black-50 {
@@ -10913,8 +10913,8 @@ header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
-  color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  color: #e4e937;
+  background-image: url("../assets/img/header11-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10985,7 +10985,7 @@ header.masthead .masthead-heading {
 #Sesiones .Sesiones-item .Sesiones-caption {
   padding: 1.5rem;
   text-align: center;
-  background-color: #fff;
+  background-color: #592c66;
 }
 #Sesiones .Sesiones-item .Sesiones-caption .Sesiones-caption-heading {
   font-size: 1.5rem;
