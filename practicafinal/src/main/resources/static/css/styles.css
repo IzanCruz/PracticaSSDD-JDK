@@ -588,9 +588,9 @@ progress {
 .imgdj{
   display: inline-block;
   vertical-align: middle;
-  height: 4em;
+  height: 8em;
   position: relative;
-  width: 4em;
+  width: 8em;
 }
 
 .img{
