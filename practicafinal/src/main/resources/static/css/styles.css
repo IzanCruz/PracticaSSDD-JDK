@@ -596,6 +596,17 @@ progress {
   margin-left: auto;
 }
 
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -11228,6 +11239,7 @@ section#contact form#contactForm .form-group textarea {
 }
 section#contact form#contactForm .form-group input.form-control {
   height: auto;
+  max-width: 550px;
 }
 section#contact form#contactForm .form-group-textarea {
   height: 100%;
