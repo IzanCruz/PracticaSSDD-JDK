@@ -10873,7 +10873,8 @@ p {
   text-transform: uppercase;
 }
 #mainNav .navbar-brand img {
-  height: 1.5rem;
+  height: 2rem;
+  width: 6rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10964,18 +10965,18 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-#Sessions .Sessions-item {
+#sessions .sessions-item {
   max-width: 26rem;
   max-height: 26rem;
   margin-left: auto;
   margin-right: auto;
 }
-#Sessions .Sessions-item .Sessions-link {
+#sessions .sessions-item .sessions-link {
   position: relative;
   display: block;
   margin: 0 auto;
 }
-#Sessions .Sessions-item .Sessions-link .Sessions-hover {
+#sessions .sessions-item .sessions-link .sessions-hover {
   display: flex;
   position: absolute;
   width: 100%;
@@ -10986,58 +10987,58 @@ header.masthead .masthead-heading {
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
 }
-#Sessions .Sessions-item .Sessions-link .Sessions-hover .Sessions-hover-content {
+#sessions .sessions-item .sessions-link .sessions-hover .sessions-hover-content {
   font-size: 1.25rem;
   color: white;
 }
-#Sessions .Sessions-item .Sessions-link:hover .Sessions-hover {
+#sessions .sessions-item .sessions-link:hover .sessions-hover {
   opacity: 1;
 }
-#Sessions .Sessions-item .Sessions-caption {
+#sessions .sessions-item .sessions-caption {
   padding: 1.5rem;
   text-align: center;
   background-color: #592c66;
   height: 100px;
 }
-#Sessions .Sessions-item .Sessions-caption .Sessions-caption-heading {
+#sessions .sessions-item .sessions-caption .sessions-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
 }
-#Sessions .Sessions-item .Sessions-caption .Sessions-caption-subheading {
+#sessions .sessions-item .sessions-caption .sessions-caption-subheading {
   font-style: italic;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.Sessions-modal .modal-dialog {
+.sessions-modal .modal-dialog {
   margin: 1rem;
   max-width: 100vw;
 }
-.Sessions-modal .modal-content {
+.sessions-modal .modal-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
 }
-.Sessions-modal .modal-content h2, .Sessions-modal .modal-content .h2 {
+.sessions-modal .modal-content h2, .sessions-modal .modal-content .h2 {
   font-size: 3rem;
   line-height: 3rem;
 }
-.Sessions-modal .modal-content p.item-intro {
+.sessions-modal .modal-content p.item-intro {
   font-style: italic;
   margin-bottom: 2rem;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.Sessions-modal .modal-content p {
+.sessions-modal .modal-content p {
   margin-bottom: 2rem;
 }
-.Sessions-modal .modal-content ul.list-inline {
+.sessions-modal .modal-content ul.list-inline {
   margin-bottom: 2rem;
 }
-.Sessions-modal .modal-content img {
+.sessions-modal .modal-content img {
   margin-bottom: 2rem;
 }
-.Sessions-modal .close-modal {
+.sessions-modal .close-modal {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -11046,7 +11047,7 @@ header.masthead .masthead-heading {
   cursor: pointer;
   background-color: transparent;
 }
-.Sessions-modal .close-modal:hover {
+.sessions-modal .close-modal:hover {
   opacity: 0.3;
 }
 
