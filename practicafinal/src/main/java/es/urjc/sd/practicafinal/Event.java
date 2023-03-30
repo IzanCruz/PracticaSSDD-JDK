@@ -4,8 +4,8 @@ public class Event {
     private Long id;
     private String name;
     private String description;
-    private static int MAX = 200;
     private int numClients;
+    private static int MAX = 200;
 
     public Event(Long id,String name,String description){
         this.id = id;

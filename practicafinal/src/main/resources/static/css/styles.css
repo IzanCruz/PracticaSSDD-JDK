@@ -588,9 +588,9 @@ progress {
 .imgdj{
   display: inline-block;
   vertical-align: middle;
-  height: 4em;
+  height: 8em;
   position: relative;
-  width: 4em;
+  width: 8em;
 }
 
 .img{
@@ -607,6 +607,17 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.img-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 576px) {
@@ -10953,18 +10964,18 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-#Sesiones .Sesiones-item {
+#Sessions .Sessions-item {
   max-width: 26rem;
   max-height: 26rem;
   margin-left: auto;
   margin-right: auto;
 }
-#Sesiones .Sesiones-item .Sesiones-link {
+#Sessions .Sessions-item .Sessions-link {
   position: relative;
   display: block;
   margin: 0 auto;
 }
-#Sesiones .Sesiones-item .Sesiones-link .Sesiones-hover {
+#Sessions .Sessions-item .Sessions-link .Sessions-hover {
   display: flex;
   position: absolute;
   width: 100%;
@@ -10975,57 +10986,58 @@ header.masthead .masthead-heading {
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
 }
-#Sesiones .Sesiones-item .Sesiones-link .Sesiones-hover .Sesiones-hover-content {
+#Sessions .Sessions-item .Sessions-link .Sessions-hover .Sessions-hover-content {
   font-size: 1.25rem;
   color: white;
 }
-#Sesiones .Sesiones-item .Sesiones-link:hover .Sesiones-hover {
+#Sessions .Sessions-item .Sessions-link:hover .Sessions-hover {
   opacity: 1;
 }
-#Sesiones .Sesiones-item .Sesiones-caption {
+#Sessions .Sessions-item .Sessions-caption {
   padding: 1.5rem;
   text-align: center;
   background-color: #592c66;
+  height: 100px;
 }
-#Sesiones .Sesiones-item .Sesiones-caption .Sesiones-caption-heading {
+#Sessions .Sessions-item .Sessions-caption .Sessions-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
 }
-#Sesiones .Sesiones-item .Sesiones-caption .Sesiones-caption-subheading {
+#Sessions .Sessions-item .Sessions-caption .Sessions-caption-subheading {
   font-style: italic;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.Sesiones-modal .modal-dialog {
+.Sessions-modal .modal-dialog {
   margin: 1rem;
   max-width: 100vw;
 }
-.Sesiones-modal .modal-content {
+.Sessions-modal .modal-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
 }
-.Sesiones-modal .modal-content h2, .Sesiones-modal .modal-content .h2 {
+.Sessions-modal .modal-content h2, .Sessions-modal .modal-content .h2 {
   font-size: 3rem;
   line-height: 3rem;
 }
-.Sesiones-modal .modal-content p.item-intro {
+.Sessions-modal .modal-content p.item-intro {
   font-style: italic;
   margin-bottom: 2rem;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.Sesiones-modal .modal-content p {
+.Sessions-modal .modal-content p {
   margin-bottom: 2rem;
 }
-.Sesiones-modal .modal-content ul.list-inline {
+.Sessions-modal .modal-content ul.list-inline {
   margin-bottom: 2rem;
 }
-.Sesiones-modal .modal-content img {
+.Sessions-modal .modal-content img {
   margin-bottom: 2rem;
 }
-.Sesiones-modal .close-modal {
+.Sessions-modal .close-modal {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -11034,7 +11046,7 @@ header.masthead .masthead-heading {
   cursor: pointer;
   background-color: transparent;
 }
-.Sesiones-modal .close-modal:hover {
+.Sessions-modal .close-modal:hover {
   opacity: 0.3;
 }
 
@@ -11241,6 +11253,7 @@ section#contact form#contactForm .form-group textarea {
 }
 section#contact form#contactForm .form-group input.form-control {
   height: auto;
+  max-width: 550px;
 }
 section#contact form#contactForm .form-group-textarea {
   height: 100%;
