@@ -588,10 +588,19 @@ progress {
 .imgdj{
   display: inline-block;
   vertical-align: middle;
-  height: 8em;
+  height: 8.5em;
   position: relative;
-  width: 8em;
+  width: 8.5em;
 }
+
+.imgdj2{
+  display: inline-block;
+  vertical-align: middle;
+  height: 2.15em;
+  position: relative;
+  width: 2.15em;
+}
+
 
 .img{
   max-width: 100%;
