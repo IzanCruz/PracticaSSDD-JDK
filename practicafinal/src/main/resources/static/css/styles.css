@@ -4107,7 +4107,7 @@ textarea.form-control-lg {
   transition: none;
 }
 .navbar-expand .offcanvas .offcanvas-header {
-  display: none;
+  display: flex;
 }
 .navbar-expand .offcanvas .offcanvas-body {
   display: flex;
