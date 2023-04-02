@@ -576,9 +576,23 @@ progress {
 
 .img-fluid {
   max-width: 100%;
+  height: 10em;
+  object-fit: cover;
+}
+
+.img-fluid1 {
+  max-width: 100%;
   height: auto;
   object-fit: cover;
 }
+
+.img-fluid2 {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+}
+
 .imgport3{
   width: 100%;
   height: 312px;
@@ -11064,19 +11078,20 @@ header.masthead .masthead-heading {
   width: 2px;
   margin-left: -1.5px;
   content: "";
-  background-color: #e9ecef;
+  background-color: yellow;
 }
 .timeline > li {
   position: relative;
   min-height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 7500px;
 }
 .timeline > li:after, .timeline > li:before {
   display: table;
-  content: " ";
+  
 }
 .timeline > li:after {
   clear: both;
+  
 }
 .timeline > li .timeline-panel {
   position: relative;
@@ -11106,7 +11121,7 @@ header.masthead .masthead-heading {
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 7px solid #e9ecef;
+  border: 7px solid yellow;
   border-radius: 100%;
   background-color: #ffc800;
 }
