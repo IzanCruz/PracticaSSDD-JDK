@@ -1,6 +1,6 @@
 package es.urjc.sd.practicafinal;
 
-import java.util.concurrent.ConcurrentHashMap;
+/*import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-public class EventController {
+public class EventController {*/
     
     /*@Autowired
     private Client client;
@@ -74,4 +74,4 @@ public class EventController {
     return "event-deleted";
     }
     */
-}
+/*} */
