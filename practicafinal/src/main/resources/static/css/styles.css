@@ -6616,7 +6616,7 @@ textarea.form-control-lg {
 }
 
 .placeholder-sm {
-  min-height: 0.8em;
+  min-height: 0.8emtext-uppercase
 }
 
 .placeholder-lg {
@@ -11258,7 +11258,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #000;
-  background-image: url("../assets/img/logo1.2.png");
+  background-image: var(--bs-black);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90%;
@@ -11284,7 +11284,7 @@ section#contact form#contactForm .form-group input.form-control {
   max-width: 550px;
 }
 section#contact form#contactForm .form-group-textarea {
-  height: 100%;
+  height: 85.75%;
 }
 section#contact form#contactForm .form-group-textarea textarea {
   height: 100%;
