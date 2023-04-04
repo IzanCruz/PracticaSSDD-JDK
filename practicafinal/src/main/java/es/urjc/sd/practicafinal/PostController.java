@@ -4,6 +4,7 @@ import java.net.URI;
 import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 //import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 //import org.springframework.web.bind.annotation.PathVariable;
@@ -24,16 +25,17 @@ return posts.findAll();
 }
 
 //Devuelve javascript en vez de la página 
-@RequestMapping("/entradas.html")
+/*@GetMapping("/entradas.html")
 public Collection<Post> getPosts2() {
 return posts.findAll();
-}
+}*/
 
-@PostMapping("?")
-public ResponseEntity<Post> createPost(@RequestBody Post post){
+@PostMapping("/entradas.html")
+public String createPost(Model model,@RequestBody Post post){
    posts.save(post);
    URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(post.getId()).toUri();
-   return ResponseEntity.created(location).body(post);
+   ResponseEntity.created(location).body(post);
+   return "entradas";
     
 }
 /*@GetMapping("/{id}")

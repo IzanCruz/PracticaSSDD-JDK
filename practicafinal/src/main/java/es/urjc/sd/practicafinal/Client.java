@@ -22,5 +22,5 @@ public class Client {
         return numTickets;
     }
     public void buyTicket(){numTickets++;}
-    public void incEvents(){this.numEvents++;}
+    public void incEvents(){numEvents++;}
 }
