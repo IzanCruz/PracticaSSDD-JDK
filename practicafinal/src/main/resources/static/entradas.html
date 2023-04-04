@@ -67,8 +67,7 @@
                     <!-- form for buying tickets -->
                     <form>
                         <div class="form-group">
-                            <label for="name"></label>
-                            <input type="text" class="form-control" id="name" placeholder="Nombre Completo*">
+                            <input type="text" class="form-control" id="name" placeholder="Nombre Completo*" data-sb-validations="required">
                             <div class="invalid-feedback" data-sb-feedback="name:required">Nombre y apellidos requeridos
                             </div>
                         </div>
@@ -81,18 +80,16 @@
                         </div>
                         <div class="form-group">
                             <label for="phone"></label>
-                            <input type="text" class="form-control" id="phone" placeholder="Teléfono">
-                            <div class="invalid-feedback" data-sb-feedback="phone:invalid">Número de teléfono no válido
+                            <input type="tel" class="form-control" id="phone" placeholder="Teléfono" data-sb-validations="required">
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">Número de teléfono no válido
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="dropdown">
                                 <label for="num"></label>
                                 <input type="number" class="form-control" id="num" placeholder="Entradas*" min="1"
-                                    max="10">
-                                <div class="invalid-feedback" data-sb-feedback="number:required">Necesitas por lo menos
-                                    una entrada</div>
-                                <div class="invalid-feedback" data-sb-feedback="number:number">Necesitas por lo menos
+                                    max="10" data-sb-validations="required">
+                                <div class="invalid-feedback" data-sb-feedback="num:required">Necesitas por lo menos
                                     una entrada</div>
                             </div>
                             <label></label>
