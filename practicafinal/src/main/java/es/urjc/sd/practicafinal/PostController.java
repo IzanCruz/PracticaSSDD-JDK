@@ -30,12 +30,13 @@ public Collection<Post> getPosts2() {
 return posts.findAll();
 }*/
 
-@PostMapping("/entradas.html")
-public String createPost(Model model,@RequestBody Post post){
+@RequestMapping("/entradas.html")
+public String createPost(Model model, Post post){
    posts.save(post);
+   model.addAttribute("posts", posts.findAll());
    URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(post.getId()).toUri();
    ResponseEntity.created(location).body(post);
-   return "entradas";
+   return "entradas.html";
     
 }
 /*@GetMapping("/{id}")
@@ -48,3 +49,4 @@ return ResponseEntity.notFound().build();
 }
 }*/
 }
+
