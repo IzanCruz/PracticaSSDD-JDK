@@ -1,13 +1,12 @@
-const username = document.getElementById('Usuario')
-const password = document.getElementById('Contraseña')
-const button = document.getElementById('button')
+document.getElementById("button").addEventListener("click", function() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-button.addEventListener('click', (e) => {
-    e.preventDefault()
-    const data = {
-        username: username.value,
-        password:username.value 
+    if (username === "admin" && password === "1234") {
+        window.location.href = "resources/static/index.html";
+    } else if (username === "usuario1" && password === "56789") {
+        window.location.href = "resources/static/entradas.html";
+    } else {
+        alert("Usuario o contraseña incorrecta. Inténtalo de nuevo.TU PUTA MADRE");
     }
-
-    console.log(data)
-})
+});
