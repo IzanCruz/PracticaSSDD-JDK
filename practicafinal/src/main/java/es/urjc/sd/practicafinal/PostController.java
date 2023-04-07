@@ -4,6 +4,7 @@ import java.net.URI;
 import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 //import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,10 +20,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 public class PostController {
 @Autowired
 private PostService posts;
-@GetMapping("por determinar")
-public Collection<Post> getPosts1() {
-return posts.findAll();
-}
+
+
+
 
 //Devuelve javascript en vez de la página 
 /*@GetMapping("/entradas.html")
@@ -30,13 +30,15 @@ public Collection<Post> getPosts2() {
 return posts.findAll();
 }*/
 
-@RequestMapping("/entradas.html")
-public String createPost(Model model, Post post){
-   posts.save(post);
-   model.addAttribute("posts", posts.findAll());
+
+@PostMapping("/entradas.html?")
+public void createPost(Model model, @RequestBody Post  post){
+   
+   /*model.addAttribute("posts", posts.findAll());
    URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(post.getId()).toUri();
    ResponseEntity.created(location).body(post);
-   return "entradas.html";
+   return "entradas.html";*/
+   this.posts.save(post);
     
 }
 /*@GetMapping("/{id}")
