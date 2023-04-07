@@ -2,6 +2,7 @@ package es.urjc.sd.practicafinal;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,14 +15,14 @@ public class LoginController {
     return "login.html";
   }
 
-  @RequestMapping("/login")
+  @RequestMapping("/login2")
     public String submitLoginForm(@RequestParam String username, @RequestParam String password) {
         if (username.equals("admin") && password.equals("1234")) {
-            return "admin.html";
+            return "redirect:/admin";
         } else if (username.equals("usuario") && password.equals("1234")) {
-            return "usuario.html";
+            return "redirect:/user";
         } else {
-            return "error.html";
+            return "redirect:/error";
         }
     }
   
