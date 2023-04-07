@@ -9,6 +9,7 @@ public class Post {
     private String email;
     private int tlf;
     private String text;
+    private int numTickets;
     
     public Post() {
     }
@@ -19,6 +20,15 @@ public class Post {
         this.email = email;
         this.tlf = tlf;
         this.text = text;
+    }
+    
+
+
+    public Post(String name, String email, int tlf, int numTickets) {
+        this.name = name;
+        this.email = email;
+        this.tlf = tlf;
+        this.numTickets = numTickets;
     }
 
 
@@ -62,10 +72,24 @@ public class Post {
         this.text = text;
     }
 
+
+    public int getNumTickets() {
+        return numTickets;
+    }
+
+
+    public void setNumTickets(int numTickets) {
+        this.numTickets = numTickets;
+    }
+
+
     @Override
     public String toString() {
-        return "Post [id=" + id + ", name=" + name + ", email=" + email + ", tlf=" + tlf + ", text=" + text + "]";
+        return "Post [id=" + id + ", name=" + name + ", email=" + email + ", tlf=" + tlf + ", text=" + text
+                + ", numTickets=" + numTickets + "]";
     }
+
+    
     
    
 }
