@@ -1,6 +1,9 @@
 package es.urjc.sd.practicafinal;
 
+import org.springframework.data.annotation.Id;
+
 public class Post {
+    @Id
     private Long id;
     private String name;
     private String email;

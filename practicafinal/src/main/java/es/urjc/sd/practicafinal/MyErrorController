@@ -1,0 +1,14 @@
+@Controller
+public class MyErrorController implements ErrorController {
+
+    @GetMapping("/error")
+    public String handleError(HttpServletRequest request) {
+        //do something like logging
+        return "myErrorPage";
+    }
+
+    @Override
+    public String getErrorPath() {
+        return "/error";
+    }
+}
