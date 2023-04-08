@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
+
 @Controller
 public class TicketController {
     
@@ -31,6 +33,9 @@ public class TicketController {
         model.addAttribute("tickets", ticketService.getByType(TicketType.valueOf(type)));
         return "mostrarEntradas"; 
     }
+
+
+ 
 }
 
 // @RestController
