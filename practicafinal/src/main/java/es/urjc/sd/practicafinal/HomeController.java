@@ -22,7 +22,7 @@ public class HomeController {
         ClubSession[] sessions = new ClubSession[] {
             new ClubSession(1, "REMEMBER"),
             new ClubSession(2, "TECHNO"),
-            new ClubSession(3, "PREUNIVERIPARTY"),
+            new ClubSession(3, "PREUNIVERSIPARTY"),
             new ClubSession(4, "REGGAETON"),
             new ClubSession(5, "MÚSICA ESPAÑOLA"),
             new ClubSession(6, "POP"),
