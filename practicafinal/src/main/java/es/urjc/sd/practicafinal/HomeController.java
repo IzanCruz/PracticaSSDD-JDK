@@ -35,11 +35,13 @@ public class HomeController {
        
         return "login";
     }
-    @GetMapping("/login2")
-    public String view(Model model) {
+    @GetMapping("/home.html")
+    public String back(Model model) {
        
-        return "admin";
+        return "home";
     }
+    
+ 
 
 
 }

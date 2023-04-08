@@ -12,7 +12,7 @@ public class LoginController {
 
   @GetMapping("/login")
   public String showLoginForm() {
-    return "login.html";
+    return "login";
   }
 
   @RequestMapping("/login2")
@@ -29,17 +29,17 @@ public class LoginController {
 
   @GetMapping("/admin")
   public String showAdminPage() {
-    return "admin.html";
+    return "admin";
   }
 
   @GetMapping("/user")
   public String showUserPage() {
-    return "user.html";
+    return "user";
   }
 
   @GetMapping("/error")
   public String showErrorPage() {
-    return "error.html";
+    return "error";
   }
 
 }
