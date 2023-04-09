@@ -16,7 +16,9 @@ public class TicketRepository {
     }
 
     public void save(Ticket ticket) {
+        
         ticket.setId(nextId);
-        tickets.put(nextId++, ticket);
-    }
+        tickets.put(nextId++, ticket);}
+        
+    
 }

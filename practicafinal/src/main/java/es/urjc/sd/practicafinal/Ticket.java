@@ -29,4 +29,25 @@ public class Ticket {
     public void setType(TicketType type) {
         this.type = type;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int getTlf() {
+        return tlf;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTlf(int tlf) {
+        this.tlf = tlf;
+    }
+
+    public void setClient(String client) {
+        this.client = client;
+    }
+    
 }

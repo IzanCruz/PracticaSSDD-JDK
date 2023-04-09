@@ -10,11 +10,18 @@ public class TicketService {
     @Autowired
     private TicketRepository ticketRepository;
 
+    
+
     public List<Ticket> getByType(TicketType type) {
         return ticketRepository.getByType(type);
     }
     
-    public void save(Ticket ticket) {
-        ticketRepository.save(ticket);
+    public boolean save(Ticket ticket) {
+        if (ticket.getClient().isEmpty()){
+            return false;
+        }
+        else{
+       ticketRepository.save(ticket);
+        return true;}
     }
 }
