@@ -43,20 +43,20 @@
                     <!-- form for buying tickets -->
                     <form action="/tickets/add" method="post" >
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre Completo*" data-sb-validations="required">
+                            <input type="text" class="form-control" th:field="*{client}" name="name" id="name" placeholder="Nombre Completo*" data-sb-validations="required">
                             <div class="invalid-feedback" data-sb-feedback="name:required">Nombre y apellidos requeridos
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email"></label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email*"
+                            <input type="email" class="form-control" th:field="*{email}"name="email" id="email" placeholder="Email*"
                                 data-sb-validations="required,email" />
                             <div class="invalid-feedback" data-sb-feedback="email:required">Se necesita un correo</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">El correo introducido no es válido</div>
                         </div>
                         <div class="form-group">
                             <label for="phone"></label>
-                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Teléfono" data-sb-validations="required">
+                            <input type="tel" class="form-control" th:field="*{tlf}" name="phone" id="phone" placeholder="Teléfono" data-sb-validations="required">
                             <div class="invalid-feedback" data-sb-feedback="phone:required">Número de teléfono no válido
                             </div>
                         </div>
