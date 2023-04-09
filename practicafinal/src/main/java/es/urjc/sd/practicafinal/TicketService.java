@@ -21,7 +21,7 @@ public class TicketService {
             return false;
         }
         else{
-       ticketRepository.save(ticket);
+        ticketRepository.save(ticket);
         return true;}
     }
 }

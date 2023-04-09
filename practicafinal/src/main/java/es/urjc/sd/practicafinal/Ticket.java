@@ -1,13 +1,13 @@
 package es.urjc.sd.practicafinal;
 
 public class Ticket {
-    private Long id;
+    private long id;
     private TicketType type;
     private String email;
-    private int tlf;
+    private Long tlf;
     private String client; 
 
-    public Ticket(TicketType type, String client,String email, int tlf) {
+    public Ticket(TicketType type, String client,String email, long tlf) {
         this.type = type;
         this.client = client;
         this.email = email;
@@ -34,7 +34,7 @@ public class Ticket {
         return email;
     }
 
-    public int getTlf() {
+    public Long getTlf() {
         return tlf;
     }
 
@@ -42,12 +42,18 @@ public class Ticket {
         this.email = email;
     }
 
-    public void setTlf(int tlf) {
+    public void setTlf(Long tlf) {
         this.tlf = tlf;
     }
 
     public void setClient(String client) {
         this.client = client;
     }
+
+    @Override
+    public String toString() {
+        return "Ticket [id=" + id + ", type=" + type + ", email=" + email + ", tlf=" + tlf + ", client=" + client + "]";
+    }
+    
     
 }
