@@ -35,7 +35,7 @@ public class TicketController {
         return "mostrarEntradas"; 
     }
 
-    @RequestMapping(value = "/tickets/add", method = RequestMethod.POST)
+    @PostMapping("/tickets/add")
 	public String newBookProcess(Model model, Ticket ticket) {
         ticketService.save(ticket);
         return "mostrarEntradas" ;
