@@ -1,26 +1,32 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <h1>CREAR EVENTO</h1>
+  <meta charset="UTF-8">
+  <title>Crear Evento</title>
 </head>
+
 <body>
-    <form method="POST" action="/events/add">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        
-        <label for="description">Descripción:</label>
-        <textarea id="description" name="description" required></textarea>
-        <br>
-      
-        <label for="date">Fecha:</label>
-        <input type="date" id="date" name="date" required>
-        <br>
-      
-        <label for="room">Sala:</label>
-        <input type="text" id="room" name="room" required>
-        <br>
-      
-        <button type="submit">Agregar evento</button>
-      </form>
+  <h1>CREAR EVENTO</h1>
+  <form method="POST" action="/events/add">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" required></textarea>
+    <br>
+
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+
+    <label for="room">Sala:</label>
+    <input type="text" id="room" name="room" required>
+    <br>
+
+    <button type="submit">Agregar evento</button>
+  </form>
 </body>
-</html>  
+
+</html>

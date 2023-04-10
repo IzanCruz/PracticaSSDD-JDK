@@ -48,4 +48,9 @@ public class EventController {
         // Cargar la vista ticketConfirmation
         return "eventConfirmation";
     }
+
+    @GetMapping("/createEvent.html")
+    public String createEvent(Model model) {
+        return "createEvent";
+    }
 } 
