@@ -4,16 +4,26 @@ public class Event {
     private Long id;
     private String name;
     private String description;
-    private int numClients;
-    private static int MAX = 200;
+    private EventType type;
+    private String date;
+    private String room;
 
-    public Event(Long id,String name,String description){
-        this.id = id;
+    public Event(EventType type,String name,String description, String date, String room){
+        this.type = type;
         this.name = name;
         this.description = description;
-        this.numClients = 0;
+        this.date = date;
+        this.room = room;
+        }
+        
 
+    public Event(String name, String description,String date, String room) {
+        this.name = name;
+        this.description = description;
+        this.date = date;
+        this.room = room;
     }
+
 
     public Long getId() {
         return id;
@@ -31,22 +41,53 @@ public class Event {
         return description;
     }
 
-    public static int getMAX() {
-        return MAX;
+   
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getNumClients() {
-        return numClients;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public void addClient(){
-        numClients++;
+    public EventType getType() {
+        return type;
     }
+
+    public void setType(EventType type) {
+        this.type = type;
+    }
+
+
+    public String getDate() {
+        return date;
+    }
+
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+
+    public String getRoom() {
+        return room;
+    }
+
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
 
     @Override
     public String toString() {
-        return "event [id=" + id + ", name=" + name + ", description=" + description + "]";
+        return "Event [id=" + id + ", name=" + name + ", description=" + description + ", type=" + type + ", date="
+                + date + ", room=" + room + "]";
     }
+
+    
+    
 
    
     

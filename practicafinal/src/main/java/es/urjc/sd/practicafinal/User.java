@@ -1,10 +1,10 @@
 package es.urjc.sd.practicafinal;
 
-public class Usuario {
+public class User {
     private String username;
     private String password;
-    public Usuario() {}
-    public Usuario(String username, String password) {
+    public User() {}
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
