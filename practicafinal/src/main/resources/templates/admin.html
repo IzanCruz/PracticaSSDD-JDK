@@ -79,6 +79,9 @@
                     <h2 class="section-heading text-uppercase">Sesiones</h2>
                     <h3 class="section-subheading text-muted">Tus entradas para las mejores sesiones aquí</h3>
                 </div>
+                <div class="centered-button">
+                    
+                </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- sessions item 1-->
@@ -170,6 +173,11 @@
                 </div>
             </div>
         </section>
+        <div class="centered-button">
+            <a href="/createEvent.html" class="btn btn-primary">
+              <i class="fas fa-plus"></i> Añadir Evento
+            </a>
+        </div>
         <!-- Nights-->
         <!-- Story about the creation of the nightclub, from its beginning to the present -->
         <section class="page-section" id="nights">
@@ -262,6 +270,7 @@
         <!-- It shows the information that will be shown in the sessions when clicking the plus button, 
             where information about what the session will deal with will be shown -->
         <!-- sessions item 1 modal popup-->
+        
         <div class="sessions-modal modal fade" id="sessionsModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -289,10 +298,10 @@
                                             <strong>13/05 23:00h</strong>
                                         </li>
                                     </ul>
-                                    <!--<a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                    <a action="/tickets1" method="get"><button class="btn btn-primary btn-xl text-uppercase"
                                             data-bs-dismiss="modal" type="button">
-                                            COMPRAR ENTRADAS
-                                        </button></a>-->
+                                            ENTRADAS COMPRADAS
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
@@ -331,10 +340,10 @@
                                             Graphic Design
                                         </li>
                                     </ul>
-                                    <!--<a href="entradas2.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                    <a action="/tickets1" method="get"></a><button class="btn btn-primary btn-xl text-uppercase"
                                             data-bs-dismiss="modal" type="button">
-                                            COMPRAR ENTRADAS
-                                        </button></a>-->
+                                            ENTRADAS COMPRADAS
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
@@ -372,10 +381,10 @@
                                             Identity
                                         </li>
                                     </ul>
-                                    <!--<a href="entradas3.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                    <a action="/tickets1" method="get"></a><button class="btn btn-primary btn-xl text-uppercase"
                                             data-bs-dismiss="modal" type="button">
-                                            COMPRAR ENTRADAS
-                                        </button></a>-->
+                                            ENTRADAS COMPRADAS
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
@@ -418,10 +427,10 @@
                                             Branding
                                         </li>
                                     </ul>
-                                    <!--<a href="entradas4.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                    <a action="/tickets1" method="get"></a><button class="btn btn-primary btn-xl text-uppercase"
                                             data-bs-dismiss="modal" type="button">
-                                            COMPRAR ENTRADAS
-                                        </button></a>-->
+                                            ENTRADAS COMPRADAS
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
@@ -459,10 +468,10 @@
                                             Website Design
                                         </li>
                                     </ul>
-                                    <!--<a href="entradas5.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                    <a action="/tickets1" method="get"></a><button class="btn btn-primary btn-xl text-uppercase"
                                             data-bs-dismiss="modal" type="button">
-                                            COMPRAR ENTRADAS
-                                        </button></a>-->
+                                            ENTRADAS COMPRADAS
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
@@ -504,10 +513,11 @@
                                             Photography
                                         </li>
                                     </ul>
-                                    <!--<a href="entradas6.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                            data-bs-dismiss="modal" type="button">
-                                            COMPRAR ENTRADAS
-                                        </button></a>-->
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
+                                        onclick="window.location.href='/tickets1'">
+                                            ENTRADAS COMPRADAS
+                                    </button>
+
                                 </div>
                             </div>
                         </div>
