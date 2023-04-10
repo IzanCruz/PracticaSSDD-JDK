@@ -2,14 +2,17 @@
 <html lang="en">
  {{>header}} 
 
+ <!-- Home page, which corresponds to the name of home.html, and is the anonymous view, 
+    where you can only consult the information about the page and the sessions, since it is necessary to login to buy tickets -->
 
 <body id="page-top">
-    <!-- Navigation-->
+    <!--Here we find the upper navigation bar that allows us to move through all the details of the page-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
-                <h1>JDK</h1><!--<img src="assets/img/logo2.png" alt="..." />-->
+                <h1>JDK</h1>
             </a>
+            <!-- This is to be displayed in case of split screen -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -17,6 +20,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-6 py-lg-0">
+                    <!-- Different sections within the page -->
                     <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sessions">Sesiones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#nights">Sobre Nosotros</a></li>
@@ -27,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <!-- Masthead-->
+    <!-- Start message -->
     <header class="masthead">
         <div class="container">
             <div class="masthead-subheading">Bienvenidos a...</div>
@@ -35,7 +39,7 @@
             <a class="btn btn-primary btn-xl text-uppercase" href="#sessions">SESIONES</a>
         </div>
     </header>
-    <!-- DJ's-->
+    <!-- Here we find the different services offered by our nightclub -->
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
@@ -43,6 +47,7 @@
             </div>
             <div class="row text-center">
                 <div class="col-md-4">
+                    <!--All services are governed by the same format, where circular photo together with informative text-->
                     <img class="imgdj rounded-circle" src="assets/img/DJ's/DJ 1.jpeg">
                     <h4 class="my-3">Música actual</h4>
                     <p class="text-muted">Disfruta de lo último del panorama músical. Todos los hits, las últimas
@@ -66,6 +71,7 @@
     </section>
     <!-- About-->
     <section class="page-section" id="about">
+        <!-- <!-- Page where you can see the sessions offered by the nightclub and by being in the user session, you can buy tickets for the sessions --> 
         <!-- sessions Grid-->
         <section class="page-section bg-light" id="sessions">
             <div class="container">
@@ -74,25 +80,98 @@
                     <h3 class="section-subheading text-muted">Tus entradas para las mejores sesiones aquí</h3>
                 </div>
                 <div class="row">
-                    {{#sessions}}
                     <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- sessions item 1-->
                         <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal{{ id }}">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal1">
                                 <div class="sessions-hover">
                                     <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img" src="assets/img/sessions/{{ id }}.jpg" alt="..." />
+                                <img class="img" src="assets/img/sessions/1.jpg" alt="..." />
                             </a>
                             <div class="sessions-caption">
-                                <div class="sessions-caption-heading">{{ name }}</div>
+                                <div class="sessions-caption-heading">REMEMBER</div>
+
                             </div>
                         </div>
                     </div>
-                    {{/sessions}}
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- sessions item 2-->
+                        <div class="sessions-item">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal2">
+                                <div class="sessions-hover">
+                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img" src="assets/img/sessions/2.jpg" alt="..." />
+                            </a>
+                            <div class="sessions-caption">
+                                <div class="sessions-caption-heading">TECNO</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- sessions item 3-->
+                        <div class="sessions-item">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal3">
+                                <div class="sessions-hover">
+                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="imgport3" src="assets/img/sessions/3.jpg" alt="..." />
+                            </a>
+                            <div class="sessions-caption">
+                                <div class="sessions-caption-heading">PREUNIVERSI-PARTY</div>
+                                <div class="sessions-caption-subheading text-muted">Solo menores 18</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- sessions item 4-->
+                        <div class="sessions-item">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal4">
+                                <div class="sessions-hover">
+                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img" src="assets/img/sessions/4.jpg" alt="..." />
+                            </a>
+                            <div class="sessions-caption">
+                                <div class="sessions-caption-heading">REGGEATON</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- sessions item 5-->
+                        <div class="sessions-item">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal5">
+                                <div class="sessions-hover">
+                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img" src="assets/img/sessions/5.jpg" alt="..." />
+                            </a>
+                            <div class="sessions-caption">
+                                <div class="sessions-caption-heading">MÚSICA ESPAÑOLA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- sessions item 6-->
+                        <div class="sessions-item">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal6">
+                                <div class="sessions-hover">
+                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img" src="assets/img/sessions/6.jpg" alt="..." />
+                            </a>
+                            <div class="sessions-caption">
+                                <div class="sessions-caption-heading">POP</div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Nights-->
+        <!-- Story about the creation of the nightclub, from its beginning to the present -->
         <section class="page-section" id="nights">
             <div class="container">
                 <div class="text-center">
@@ -232,110 +311,12 @@
                 </div>
             </div>
         </section>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contacta con nosotros</h2>
-                    <h3 class="section-subheading text-muted">Escribe tus dudas y te responderemos lo antes posible.
-                    </h3>
-                </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <p class="text-white">Introduzca su Nombre</p>
-                                <input class="form-control" id="name" type="text" placeholder="Nombre *"
-                                    data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <p class="text-white">Introduzca su correo</p>
-                                <input class="form-control" id="email" type="email" placeholder="Email *"
-                                    data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
-                                </div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <p class="text-white">Introduzca su numero de teléfono</p>
-                                <input class="form-control" id="phone" type="tel" placeholder="Teléfono Móvil*"
-                                    data-sb-validations="required" />
-                                    
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
-                                    required.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <p class="text-white">Introduzca su mensaje (CAMPO NO OBLIGATORIO)</p>
-                                <textarea class="form-control" id="message" placeholder="Escribe aquí *"
-                                    data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a
-                                href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage">
-                        <div class="text-center text-danger mb-3">Error sending message!</div>
-                    </div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled"
-                            id="submitButton" type="submit">Send Message</button></div>
-                </form>
-            </div>
-        </section>
         <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; JDK 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="PrivacyPolicy.pdf" target="_blank">Política
-                            de Privacidad</a>
-                        <a class="link-dark text-decoration-none" href="TérminosUso.pdf" target="_blank">Términos de
-                            Uso</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        {{>footer}}
+        
         <!-- sessions Modals-->
+        <!-- Information about the sessions and what will happen in each one of them, when viewed anonymously, 
+            only the information of each session will be seen -->
         <!-- sessions item 1 modal popup-->
         <div class="sessions-modal modal fade" id="sessionsModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
