@@ -37,13 +37,21 @@ public class TicketController {
     }
 
     @PostMapping("/tickets/add")
-	public String newBookProcess(@ModelAttribute("ticket") Ticket ticket) {
-        
-        System.out.println(ticket);
+    public String addTicket(@RequestParam("name") String name, @RequestParam("email") String email,
+            @RequestParam("num") int num, Model model) {
+
+        // Guardar los datos del ticket en la base de datos o donde corresponda
+        Ticket ticket = new Ticket(TicketType.NORMAL, name, email, num);
         ticketService.save(ticket);
-        return "mostrarEntradas" ;
-		
-	}
+
+        // Agregar los datos del ticket al modelo para mostrarlos en la vista
+        model.addAttribute("name", name);
+        model.addAttribute("email", email);
+        model.addAttribute("num", num);
+
+        // Cargar la vista ticketConfirmation
+        return "ticketConfirmation";
+    }
 
 
  
