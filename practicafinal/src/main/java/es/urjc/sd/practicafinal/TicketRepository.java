@@ -1,6 +1,8 @@
 package es.urjc.sd.practicafinal;
 
 import org.springframework.stereotype.Repository;
+
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List; 
 import java.util.stream.Collectors;
@@ -20,8 +22,8 @@ public class TicketRepository {
         ticket.setId(nextId);
         tickets.put(nextId++, ticket);}
 
-    public List<Ticket> findAll() {
-        return null;
+    public Collection<Ticket> findAll() {
+        return tickets.values();
     }
         
     

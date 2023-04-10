@@ -19,7 +19,7 @@ public class TicketController {
     private TicketService ticketService; 
 
     @GetMapping("/tickets1")
-    public String test1(Model model, @RequestParam(defaultValue = "VIP") String type) {
+    public String test1(Model model, @RequestParam String type) {
        
             Ticket ticket = new Ticket(TicketType.VIP, "Manolo","manolo@gmail.com",633943611);
             ticketService.save(ticket);
