@@ -7,6 +7,15 @@ public class Event {
     private EventType type;
     private String date;
     private String room;
+    
+
+    public Event(Long id, String name, String date, String room) {
+        this.id = id;
+        this.name = name;
+        this.date = date;
+        
+    }
+
 
     public Event(EventType type,String name,String description, String date, String room){
         this.type = type;

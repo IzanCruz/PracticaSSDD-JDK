@@ -8,7 +8,7 @@ import org.springframework.web.context.annotation.SessionScope;
 public class Client {
     private String name;
     private int numTickets;
-    private int numEvents;
+   
 
     public String getName() {
         return name;
@@ -22,5 +22,5 @@ public class Client {
         return numTickets;
     }
     public void buyTicket(){numTickets++;}
-    public void incEvents(){numEvents++;}
+    
 }

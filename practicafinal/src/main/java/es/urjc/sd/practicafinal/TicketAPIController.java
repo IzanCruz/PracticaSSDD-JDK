@@ -21,7 +21,7 @@ public class TicketAPIController {
      @GetMapping("/api/tickets")
      public List<Ticket> test(@RequestParam(defaultValue = "VIP") String type) {
         
-             Ticket ticket =  new Ticket(TicketType.VIP, "Manolo","manolo@gmail.com",633943611);
+            Ticket ticket =  new Ticket(TicketType.VIP, "Manolo","manolo@gmail.com",633943611);
              ticketService.save(ticket);
           
             Ticket ticket1 = new Ticket(TicketType.NORMAL, "Ruben","ruben@gmail.com",641543011);
