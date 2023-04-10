@@ -19,6 +19,10 @@ public class TicketRepository {
         
         ticket.setId(nextId);
         tickets.put(nextId++, ticket);}
+
+    public List<Ticket> findAll() {
+        return null;
+    }
         
     
 }

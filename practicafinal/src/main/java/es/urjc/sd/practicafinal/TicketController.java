@@ -33,6 +33,7 @@ public class TicketController {
         model.addAttribute("name", "REMEMBER");
         model.addAttribute("date", "2020-12-12");
         model.addAttribute("tickets", ticketService.getByType(TicketType.valueOf(type)));
+        ticketService.findAllList();
         return "mostrarEntradas"; 
     }
 
