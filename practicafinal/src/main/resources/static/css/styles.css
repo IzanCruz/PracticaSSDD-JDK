@@ -6703,7 +6703,7 @@ textarea.form-control-lg {
   color: #ffc800 !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #cca000 !important;
+  color: #e4d543 !important;
 }
 
 .link-secondary {
@@ -6749,7 +6749,7 @@ textarea.form-control-lg {
 }
 
 .link-dark {
-  color: #212529 !important;
+  color: #e4d543 !important;
 }
 .link-dark:hover, .link-dark:focus {
   color: #1a1e21 !important;
@@ -10882,7 +10882,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: #592c66;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
