@@ -23,5 +23,9 @@ public class TicketService {
             return true;
         }
     }
+
+    public List<Ticket> findAllList() {
+       return ticketRepository.findAll();
+    }
 }
 
