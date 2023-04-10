@@ -2,14 +2,17 @@
 <html lang="en">
  {{>header}} 
 
+ <!-- Home page, which corresponds to the name of home.html, and is the anonymous view, 
+    where you can only consult the information about the page and the sessions, since it is necessary to login to buy tickets -->
 
 <body id="page-top">
-    <!-- Navigation-->
+    <!--Here we find the upper navigation bar that allows us to move through all the details of the page-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
-                <h1>JDK</h1><!--<img src="assets/img/logo2.png" alt="..." />-->
+                <h1>JDK</h1>
             </a>
+            <!-- This is to be displayed in case of split screen -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -17,6 +20,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-6 py-lg-0">
+                    <!-- Different sections within the page -->
                     <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sessions">Sesiones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#nights">Sobre Nosotros</a></li>
@@ -27,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <!-- Masthead-->
+    <!-- Start message -->
     <header class="masthead">
         <div class="container">
             <div class="masthead-subheading">Bienvenidos a...</div>
@@ -35,7 +39,7 @@
             <a class="btn btn-primary btn-xl text-uppercase" href="#sessions">SESIONES</a>
         </div>
     </header>
-    <!-- DJ's-->
+    <!-- Here we find the different services offered by our nightclub -->
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
@@ -43,6 +47,7 @@
             </div>
             <div class="row text-center">
                 <div class="col-md-4">
+                    <!--All services are governed by the same format, where circular photo together with informative text-->
                     <img class="imgdj rounded-circle" src="assets/img/DJ's/DJ 1.jpeg">
                     <h4 class="my-3">Música actual</h4>
                     <p class="text-muted">Disfruta de lo último del panorama músical. Todos los hits, las últimas
@@ -66,6 +71,7 @@
     </section>
     <!-- About-->
     <section class="page-section" id="about">
+        <!-- Preview of the sessions, where as the view is anonymous we can only consult the sessions -->
         <!-- sessions Grid-->
         <section class="page-section bg-light" id="sessions">
             <div class="container">
@@ -93,6 +99,7 @@
             </div>
         </section>
         <!-- Nights-->
+        <!-- Story about the creation of the nightclub, from its beginning to the present -->
         <section class="page-section" id="nights">
             <div class="container">
                 <div class="text-center">
@@ -314,28 +321,11 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; JDK 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="PrivacyPolicy.pdf" target="_blank">Política
-                            de Privacidad</a>
-                        <a class="link-dark text-decoration-none" href="TérminosUso.pdf" target="_blank">Términos de
-                            Uso</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        {{>footer}}
+        
         <!-- sessions Modals-->
+        <!-- Information about the sessions and what will happen in each one of them, when viewed anonymously, 
+            only the information of each session will be seen -->
         <!-- sessions item 1 modal popup-->
         <div class="sessions-modal modal fade" id="sessionsModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
