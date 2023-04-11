@@ -1,4 +1,4 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.User;
 
 public class User {
     private String username;

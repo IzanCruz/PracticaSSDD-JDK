@@ -1,4 +1,4 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.Others;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

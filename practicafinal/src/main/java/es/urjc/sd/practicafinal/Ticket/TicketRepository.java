@@ -1,4 +1,4 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.Ticket;
 
 import org.springframework.stereotype.Repository;
 

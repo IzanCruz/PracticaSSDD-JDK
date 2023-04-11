@@ -1,4 +1,4 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.Others;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;

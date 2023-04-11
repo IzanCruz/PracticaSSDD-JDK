@@ -1,4 +1,4 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.Event;
 
 import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,10 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.Others;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import es.urjc.sd.practicafinal.Event.Event;
 
 @Controller
 public class HomeController {
