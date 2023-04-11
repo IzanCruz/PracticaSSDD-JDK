@@ -39,12 +39,16 @@ public class EventController {
          Event event = new Event(name, description,date,room);
         eventService.save(event);
 
-       
         model.addAttribute("name", name);
         model.addAttribute("description", description);
         model.addAttribute("date", date);
+<<<<<<< HEAD
         model.addAttribute("room", room);
                 
+=======
+        model.addAttribute("room", room);        
+        
+>>>>>>> 10b2750b90349a3c8c405bcd52f8b0ed4aec1209
         return "eventConfirmation";
     }
 
