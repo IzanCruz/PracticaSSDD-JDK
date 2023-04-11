@@ -45,7 +45,7 @@ public class EventController {
         model.addAttribute("date", date);
         model.addAttribute("room", room);        
         
->>>>>>> 10b2750b90349a3c8c405bcd52f8b0ed4aec1209
+
         return "eventConfirmation";
     }
 
