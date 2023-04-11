@@ -4,6 +4,7 @@ package es.urjc.sd.practicafinal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,9 +44,7 @@ public class EventController {
         model.addAttribute("description", description);
         model.addAttribute("date", date);
         model.addAttribute("room", room);
-        
-
-        
+                
         return "eventConfirmation";
     }
 
@@ -54,6 +53,8 @@ public class EventController {
         return "createEvent";
     }
 
+    
+    @RequestMapping("/events/edit")
     @PutMapping("/events/edit")
     public String editEvent(@RequestParam("name") String name, @RequestParam("description") String description,
     @RequestParam("date") String date,  @RequestParam("room") String room, Model model) {
@@ -67,4 +68,11 @@ public class EventController {
         return "eventConfirmation";
 
     }
+
+    @GetMapping("/editEvent.html")
+    public String editEvent(Model model) {
+        return "editEvent";
+    }
+
+    
 } 
