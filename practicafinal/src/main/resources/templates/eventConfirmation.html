@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,5 +14,53 @@
         <li><strong>Fecha:</strong> {{date}}</li>
         <li><strong>Sala:</strong> {{room}}</li>
     </ul>
+=======
+
+<html>
+<head>
+	<title>Confirmación de evento</title>
+</head>
+<body>
+	<h1>Evento actualizado</h1>
+	<p>El evento <strong>{{name}}</strong> se ha actualizado correctamente.</p>
+	<p>Descripción: <strong>{{description}}</strong></p>
+	<p>Fecha: <strong>{{date}}</strong></p>
+	<p>Sala: <strong>{{room}}</strong></p>
+	<a href="admin.html">Volver a la lista de eventos</a>
+=======
+<html lang="en">
+{{>header}}
+
+<!-- Home page, which corresponds to the name of home.html, and is the anonymous view, 
+    where you can only consult the information about the page and the sessions, since it is necessary to login to buy tickets -->
+
+<body id="page-top">
+    <!--Here we find the upper navigation bar that allows us to move through all the details of the page-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <h1>JDK</h1>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-6 py-lg-0">
+                    <!-- Different sections within the page -->
+                    <li class="nav-item"><a class="nav-link" href="login.html">INICIA SESION</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="text-center">
+        <h1 class="text-uppercase text-center">Evento creado correctamente</h1>
+        <p>Los detalles del evento son los siguientes:</p>
+        <ul>
+            <li><strong>Nombre:</strong> {{name}}</li>
+            <li><strong>Descripción:</strong> {{description}}</li>
+            <li><strong>Fecha:</strong> {{date}}</li>
+            <li><strong>Sala:</strong> {{room}}</li>
+        </ul>
+    </div>
+    {{>footer}}
+>>>>>>> 10b2750b90349a3c8c405bcd52f8b0ed4aec1209
+>>>>>>> ea52f5eaa3a77880cd0cc443f4ea547941358e92
 </body>
 </html>
