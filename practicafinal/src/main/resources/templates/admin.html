@@ -2,7 +2,7 @@
 <html lang="en">
 <!-- admin.html page in it we can see the view as administrator where, you can see the purchased tickets, 
     in addition to being able to remove / put events -->
-    {{>header}}
+{{>header}}
 
 <body id="page-top">
     <!--Here we find the upper navigation bar that allows us to move through all the details of the page-->
@@ -67,209 +67,205 @@
         </div>
     </section>
     <!-- About-->
-    <section class="page-section" id="about">
-        <!-- Main page where the sessions are shown, in this case the 6 offered by the club. 
-            All of them when clicking we can see the tickets that have been purchased, since it is the administrator view. -->
-        <!-- sessions Grid-->
-        <section class="page-section bs-dark" id="sessions">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Sesiones</h2>
-                    <h3 class="section-subheading text-muted">Tus entradas para las mejores sesiones aquí</h3>
-                </div>
-                <div class="centered-button">
-                    
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- sessions item 1-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal1">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/1.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">REMEMBER</div>
+    <section class="page-section bs-dark" id="sessions">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Sesiones</h2>
+                <h3 class="section-subheading text-muted">Tus entradas para las mejores sesiones aquí</h3>
+            </div>
+            <div class="centered-button">
 
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- sessions item 1-->
+                    <div class="sessions-item">
+                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal1">
+                            <div class="sessions-hover">
+                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- sessions item 2-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal2">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/2.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">TECNO</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- sessions item 3-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal3">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="imgport3" src="assets/img/sessions/3.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">PREUNIVERSI-PARTY</div>
-                                <div class="sessions-caption-subheading text-muted">Solo menores 18</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- sessions item 4-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal4">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/4.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">REGGEATON</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- sessions item 5-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal5">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/5.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">MÚSICA ESPAÑOLA</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- sessions item 6-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal6">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/6.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">POP</div>
+                            <img class="img" src="assets/img/sessions/1.jpg" alt="..." />
+                        </a>
+                        <div class="sessions-caption">
+                            <div class="sessions-caption-heading">REMEMBER</div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- sessions item 2-->
+                    <div class="sessions-item">
+                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal2">
+                            <div class="sessions-hover">
+                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
+                            <img class="img" src="assets/img/sessions/2.jpg" alt="..." />
+                        </a>
+                        <div class="sessions-caption">
+                            <div class="sessions-caption-heading">TECNO</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- sessions item 3-->
+                    <div class="sessions-item">
+                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal3">
+                            <div class="sessions-hover">
+                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="imgport3" src="assets/img/sessions/3.jpg" alt="..." />
+                        </a>
+                        <div class="sessions-caption">
+                            <div class="sessions-caption-heading">PREUNIVERSI-PARTY</div>
+                            <div class="sessions-caption-subheading text-muted">Solo menores 18</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- sessions item 4-->
+                    <div class="sessions-item">
+                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal4">
+                            <div class="sessions-hover">
+                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img" src="assets/img/sessions/4.jpg" alt="..." />
+                        </a>
+                        <div class="sessions-caption">
+                            <div class="sessions-caption-heading">REGGEATON</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- sessions item 5-->
+                    <div class="sessions-item">
+                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal5">
+                            <div class="sessions-hover">
+                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img" src="assets/img/sessions/5.jpg" alt="..." />
+                        </a>
+                        <div class="sessions-caption">
+                            <div class="sessions-caption-heading">MÚSICA ESPAÑOLA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- sessions item 6-->
+                    <div class="sessions-item">
+                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal6">
+                            <div class="sessions-hover">
+                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img" src="assets/img/sessions/6.jpg" alt="..." />
+                        </a>
+                        <div class="sessions-caption">
+                            <div class="sessions-caption-heading">POP</div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <div class="centered-button">
-            <a href="createEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
-            data-bs-dismiss="modal" type="button">
-              <i class="fas fa-plus"></i> Añadir Evento
-              </button>
-            </a>
         </div>
+    </section>
+    <div class="centered-button">
+        <a href="createEvent.html"><button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                type="button">
+                <i class="fas fa-plus"></i> Añadir Evento
+            </button>
+        </a>
+    </div>
 
-      
-        <!-- Nights-->
-        <!-- Story about the creation of the nightclub, from its beginning to the present -->
-        <section class="page-section" id="nights">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Sobre Nosotros</h2>
-                    <h3 class="section-subheading text-muted">Nuestra Historia</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto" src="assets/img/about/1.jpg"
-                                alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2018</h4>
-                                <h4 class="subheading">Nuestros comienzos</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Un grupo de amigos amantes de la música electrónica decidió crear
-                                    su propia discoteca
-                                    debido a la falta de opciones de ocio nocturno en su ciudad. Todos ellos aportaron
-                                    sus habilidades y
-                                    conocimientos para llevar adelante el proyecto, que se traian entre manos
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto"
-                                src="assets/img/Historia/2.jpeg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2019-2020</h4>
-                                <h4 class="subheading">Buscando el lugar</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Después de buscar un local adecuado y cumplir con los requisitos
-                                    legales necesarios,
-                                    los amigos transformaron el lugar en una discoteca moderna y atractiva, con un
-                                    sistema de sonido y
-                                    luces de última generación, pero todo quedaría parado con la pandemia.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto"
-                                src="assets/img/Historia/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Verano 2022</h4>
-                                <h4 class="subheading">Inaguración</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Con talentosos DJ's y personal experimentado en el mundo de la
-                                    hostelería, llegó el día de la inauguración,
-                                    que resultó ser un éxito rotundo. Los amigos se sintieron orgullosos de haber creado
-                                    un espacio de entretenimiento que la
-                                    gente disfrutaba y que se convirtió en uno de los lugares más populares de la
-                                    ciudad.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto" src="assets/img/logo1.2.png"
-                                alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2023</h4>
-                                <h4 class="subheading">Actualidad</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">En conclusión, este grupo de amigos demostró que con esfuerzo y
-                                    dedicación, es posible llevar adelante proyectos exitosos y
-                                    convertirse en empresarios nocturnos, ofreciendo opciones de entretenimiento de
-                                    calidad a su comunidad</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+
+    <!-- Nights-->
+    <!-- Story about the creation of the nightclub, from its beginning to the present -->
+    <section class="page-section" id="nights">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Sobre Nosotros</h2>
+                <h3 class="section-subheading text-muted">Nuestra Historia</h3>
             </div>
-
-
-
-
-        </section>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto"
+                            src="assets/img/about/1.jpg" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2018</h4>
+                            <h4 class="subheading">Nuestros comienzos</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Un grupo de amigos amantes de la música electrónica decidió crear
+                                su propia discoteca
+                                debido a la falta de opciones de ocio nocturno en su ciudad. Todos ellos aportaron
+                                sus habilidades y
+                                conocimientos para llevar adelante el proyecto, que se traian entre manos
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto"
+                            src="assets/img/Historia/2.jpeg" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2019-2020</h4>
+                            <h4 class="subheading">Buscando el lugar</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Después de buscar un local adecuado y cumplir con los requisitos
+                                legales necesarios,
+                                los amigos transformaron el lugar en una discoteca moderna y atractiva, con un
+                                sistema de sonido y
+                                luces de última generación, pero todo quedaría parado con la pandemia.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto"
+                            src="assets/img/Historia/3.jpg" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Verano 2022</h4>
+                            <h4 class="subheading">Inaguración</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Con talentosos DJ's y personal experimentado en el mundo de la
+                                hostelería, llegó el día de la inauguración,
+                                que resultó ser un éxito rotundo. Los amigos se sintieron orgullosos de haber creado
+                                un espacio de entretenimiento que la
+                                gente disfrutaba y que se convirtió en uno de los lugares más populares de la
+                                ciudad.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid3 mx-auto"
+                            src="assets/img/logo1.2.png" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2023</h4>
+                            <h4 class="subheading">Actualidad</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">En conclusión, este grupo de amigos demostró que con esfuerzo y
+                                dedicación, es posible llevar adelante proyectos exitosos y
+                                convertirse en empresarios nocturnos, ofreciendo opciones de entretenimiento de
+                                calidad a su comunidad</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        {{>footer}}
-        <!-- sessions Modals-->
 
-        <!-- It shows the information that will be shown in the sessions when clicking the plus button, 
+
+
+
+    </section>
+    </div>
+    {{>footer}}
+    <!-- sessions Modals-->
+
+    <!-- It shows the information that will be shown in the sessions when clicking the plus button, 
             where information about what the session will deal with will be shown -->
         <!-- sessions item 1 modal popup-->
         
@@ -300,15 +296,10 @@
                                             <strong>13/05 23:00h</strong>
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    onclick="window.location.href='/tickets1'">
-                                        ENTRADAS COMPRADAS
-                                    </button>
-                                    <div class="centered-button">
-                                        <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                        data-bs-dismiss="modal" type="button">
-                                          <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
-                                    </button></a></div>
+                                    <!--<a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                            data-bs-dismiss="modal" type="button">
+                                            COMPRAR ENTRADAS
+                                        </button></a>-->
                                 </div>
                             </div>
                         </div>
@@ -350,12 +341,12 @@
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
                                     onclick="window.location.href='/tickets1'">
                                         ENTRADAS COMPRADAS
-                                    </button>
-                                    <div class="centered-button">
-                                        <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                        data-bs-dismiss="modal" type="button">
-                                          <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
-                                    </button></a>
+                                </button>
+                                <div class="centered-button">
+                                    <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                            data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
@@ -363,89 +354,30 @@
                 </div>
             </div>
         </div>
-        <!-- sessions item 3 modal popup-->
-        <div class="sessions-modal modal fade" id="sessionsModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                            alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">PREUNIVERSI-PARTY</h2>
-                                    <p class="item-intro text-black">05/05/2023 23:00 Sala 1</p>
-                                    <img class="imgE d-block mx-auto" src="assets/img/sessions/3.jpg" alt="..." />
-                                    <p>La fiesta pre universitaria del año está aquí. Baila con tus amigos y conoce a
-                                        nuevas personas.
-                                        La música es variada, desde pop hasta reggaetón. Habrá concursos de baile y
-                                        canto, así como un escenario
-                                        de karaoke. La pista de baile estará iluminada con luces de neón. ¡No te pierdas
-                                        esta noche llena de diversión!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    onclick="window.location.href='/tickets1'">
-                                        ENTRADAS COMPRADAS
-                                    </button>
-                                    <div class="centered-button">
-                                        <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                        data-bs-dismiss="modal" type="button">
-                                          <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
-                                    </button></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- sessions item 4 modal popup-->
-        <div class="sessions-modal modal fade" id="sessionsModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                            alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">REGGEATON</h2>
-                                    <p class="item-intro text-black">06/05/2023 23:30 Sala 2</p>
-                                    <img class="imgE d-block mx-auto" src="assets/img/sessions/4.jpg" alt="..." />
-                                    <p>¡La fiesta de reggaetón más caliente del año ha llegado! Disfruta de una noche
-                                        llena de ritmo
-                                        con los mejores artistas del género. La música será completamente de reggaetón,
-                                        desde los clásicos
-                                        hasta los últimos éxitos. La pista de baile estará iluminada con luces de
-                                        colores y efectos especiales,
-                                        habrá concursos de baile y un bar para que disfrutes de tus bebidas favoritas.
-                                        Únete a tus amigos y
-                                        conoce a nuevas personas que comparten tus gustos musicales. ¡No te pierdas la
-                                        oportunidad de bailar
-                                        toda la noche en la fiesta de reggaetón más caliente del año!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    onclick="window.location.href='/tickets1'">
+    </div>
+    <!-- sessions item 3 modal popup-->
+    <div class="sessions-modal modal fade" id="sessionsModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">PREUNIVERSI-PARTY</h2>
+                                <p class="item-intro text-black">05/05/2023 23:00 Sala 1</p>
+                                <img class="imgE d-block mx-auto" src="assets/img/sessions/3.jpg" alt="..." />
+                                <p>La fiesta pre universitaria del año está aquí. Baila con tus amigos y conoce a
+                                    nuevas personas.
+                                    La música es variada, desde pop hasta reggaetón. Habrá concursos de baile y
+                                    canto, así como un escenario
+                                    de karaoke. La pista de baile estará iluminada con luces de neón. ¡No te pierdas
+                                    esta noche llena de diversión!</p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" onclick="window.location.href='/tickets1'">
                                         ENTRADAS COMPRADAS
                                     </button>
                                     <div class="centered-button">
@@ -460,45 +392,42 @@
                 </div>
             </div>
         </div>
-        <!-- sessions item 5 modal popup-->
-        <div class="sessions-modal modal fade" id="sessionsModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                            alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">MÚSICA ESPAÑOLA</h2>
-                                    <p class="item-intro text-black">13/05/2023 23:00 Sala 1 </p>
-                                    <img class="imgE d-block mx-auto" src="assets/img/sessions/5.jpg" alt="..." />
-                                    <p>Bienvenido a la fiesta con las mejores canciones que han marcado a la historia de
-                                        la
-                                        musica española, podrás disfrutar desde las canciones más antiguas hasta el pop
-                                        español,
-                                        más actual. Preparate para darlo todo y cantar a pleno pulmón !!!!!!
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    onclick="window.location.href='/tickets1'">
+    </div>
+    <!-- sessions item 4 modal popup-->
+    <div class="sessions-modal modal fade" id="sessionsModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">REGGEATON</h2>
+                                <p class="item-intro text-black">06/05/2023 23:30 Sala 2</p>
+                                <img class="imgE d-block mx-auto" src="assets/img/sessions/4.jpg" alt="..." />
+                                <p>¡La fiesta de reggaetón más caliente del año ha llegado! Disfruta de una noche
+                                    llena de ritmo
+                                    con los mejores artistas del género. La música será completamente de reggaetón,
+                                    desde los clásicos
+                                    hasta los últimos éxitos. La pista de baile estará iluminada con luces de
+                                    colores y efectos especiales,
+                                    habrá concursos de baile y un bar para que disfrutes de tus bebidas favoritas.
+                                    Únete a tus amigos y
+                                    conoce a nuevas personas que comparten tus gustos musicales. ¡No te pierdas la
+                                    oportunidad de bailar
+                                    toda la noche en la fiesta de reggaetón más caliente del año!</p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" onclick="window.location.href='/tickets1'">
                                         ENTRADAS COMPRADAS
-                                    </button>
-                                    <div class="centered-button">
-                                        <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                        data-bs-dismiss="modal" type="button">
-                                          <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
-                                    </button></a>
+                                </button>
+                                <div class="centered-button">
+                                    <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                            data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
@@ -506,64 +435,96 @@
                 </div>
             </div>
         </div>
-        <!-- sessions item 6 modal popup-->
-        <div class="sessions-modal modal fade" id="sessionsModal6" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                            alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">POP</h2>
-                                    <p class="item-intro text-black">13/05/2023 23:30 Sala 2</p>
-                                    <img class="imgE d-block mx-auto" src="assets/img/sessions/6.jpg" alt="..." />
-                                    <p>La fiesta de música pop más divertida del año ha llegado! Disfruta de una noche
-                                        llena
-                                        de ritmo con los mejores éxitos pop de todos los tiempos. Habrá concursos de
-                                        baile y
-                                        canto, karaoke y una zona de fotos. Además, podrás disfrutar de tus bebidas
-                                        favoritas
-                                        en el bar mientras bailas con tus amigos. Únete a la diversión y conoce a nuevas
-                                        personas
-                                        que comparten tus gustos musicales en la fiesta de música pop más emocionante
-                                        del año.</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Photography
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"
-                                    onclick="window.location.href='/tickets1'">
+    </div>
+    <!-- sessions item 5 modal popup-->
+    <div class="sessions-modal modal fade" id="sessionsModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">MÚSICA ESPAÑOLA</h2>
+                                <p class="item-intro text-black">13/05/2023 23:00 Sala 1 </p>
+                                <img class="imgE d-block mx-auto" src="assets/img/sessions/5.jpg" alt="..." />
+                                <p>Bienvenido a la fiesta con las mejores canciones que han marcado a la historia de
+                                    la
+                                    musica española, podrás disfrutar desde las canciones más antiguas hasta el pop
+                                    español,
+                                    más actual. Preparate para darlo todo y cantar a pleno pulmón !!!!!!
+                                </p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" onclick="window.location.href='/tickets1'">
                                         ENTRADAS COMPRADAS
-                                    </button>
-                                    <div class="centered-button">
-                                        <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                        data-bs-dismiss="modal" type="button">
-                                          <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
-                                    </button></a>
+                                </button>
+                                <div class="centered-button">
+                                    <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                            data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
+                                        </button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Bootstrap core JS-->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-            <!-- Core theme JS-->
-            <script src="js/scripts.js"></script>
-            <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-            <!-- * *                               SB Forms JS                               * *-->
-            <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-            <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        </div>
+    </div>
+    <!-- sessions item 6 modal popup-->
+    <div class="sessions-modal modal fade" id="sessionsModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">POP</h2>
+                                <p class="item-intro text-black">13/05/2023 23:30 Sala 2</p>
+                                <img class="imgE d-block mx-auto" src="assets/img/sessions/6.jpg" alt="..." />
+                                <p>La fiesta de música pop más divertida del año ha llegado! Disfruta de una noche
+                                    llena
+                                    de ritmo con los mejores éxitos pop de todos los tiempos. Habrá concursos de
+                                    baile y
+                                    canto, karaoke y una zona de fotos. Además, podrás disfrutar de tus bebidas
+                                    favoritas
+                                    en el bar mientras bailas con tus amigos. Únete a la diversión y conoce a nuevas
+                                    personas
+                                    que comparten tus gustos musicales en la fiesta de música pop más emocionante
+                                    del año.</p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button" onclick="window.location.href='/tickets1'">
+                                        ENTRADAS COMPRADAS
+                                </button>
+                                <div class="centered-button">
+                                    <a href="editEvent.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                            data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-pent-to-square"></i> EDITAR EVENTO
+                                        </button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
 </html>
