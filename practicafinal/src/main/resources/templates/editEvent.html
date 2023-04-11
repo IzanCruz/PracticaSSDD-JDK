@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>EDITAR Evento</title>
-</head>
+{{>header}}
 
 <body>
-  <h1>Editar EVENTO</h1>
-  <form method="PUT" action="/events/edit">
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" required>
-    <br>
-
-    <label for="description">Descripción:</label>
-    <textarea id="description" name="description" required></textarea>
-    <br>
-
-    <label for="date">Fecha:</label>
-    <input type="date" id="date" name="date" required>
-    <br>
-
-    <label for="room">Sala:</label>
-    <input type="text" id="room" name="room" required>
-    <br>
-
-    <button type="submit">Agregar evento modificado</button>
-  </form>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="../admin">
+        <h1>JDK</h1>
+      </a>
+    </div>
+  </nav>
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <div class="text-uppercase">
+            <h1>EDITAR EVENTO</h1>
+          </div>
+          <form method="PUT" action="/events/edit">
+            <div class="form-group">
+              <label for="name"></label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nombre*" required>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="description"></label>
+              <textarea id="description" class="form-control" name="description" placeholder="Descripción*"
+                required></textarea>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="date"></label>
+              <input type="date" class="form-control" id="date" name="date" placeholder="Fecha*" required>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="room"></label>
+              <input type="text" class="form-control" id="room" name="room" placeholder="Sala*" required>
+              <br>
+            </div>
+            <button class="btn btn-primary" type="submit">CONFIRMAR</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{>footer}}
 </body>
 
 </html>

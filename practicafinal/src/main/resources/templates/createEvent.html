@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Crear Evento</title>
-</head>
+{{>header}}
 
 <body>
-  <h1>CREAR EVENTO</h1>
-  <form method="POST" action="/events/add">
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" required>
-    <br>
-
-    <label for="description">Descripción:</label>
-    <textarea id="description" name="description" required></textarea>
-    <br>
-
-    <label for="date">Fecha:</label>
-    <input type="date" id="date" name="date" required>
-    <br>
-
-    <label for="room">Sala:</label>
-    <input type="text" id="room" name="room" required>
-    <br>
-
-    <button type="submit">Agregar evento</button>
-  </form>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="../admin">
+        <h1>JDK</h1>
+      </a>
+    </div>
+  </nav>
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <div class="text-uppercase">
+            <h1>CREAR EVENTO</h1>
+          </div>
+          <form method="POST" action="/events/add">
+            <div class="form-group">
+              <label for="name"></label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del evento*" required>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="description"></label>
+              <textarea id="description" class="form-control" name="description" placeholder="Descripción del evento*"
+                required></textarea>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="date"></label>
+              <input type="date" class="form-control" id="date" name="date" placeholder="Fecha del evento*" required>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="room"></label>
+              <input type="text" class="form-control" id="room" name="room" placeholder="Sala para el evento*" required>
+              <br>
+            </div>
+            <label></label>
+            <button class="btn btn-primary" type="submit">CREAR EVENTO</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{>footer}}
 </body>
 
 </html>

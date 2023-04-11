@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Ticket Confirmation</title>
-</head>
+{{>header}}
+
 <body>
-	<h1>Ticket purchased successfully!</h1>
-	<p>Thank you for your purchase, <strong>{{name}}</strong>!</p>
-	<p>We have sent a confirmation email to <strong>{{email}}</strong>.</p>
-	<p>You have purchased <strong>{{num}}</strong> tickets.</p>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand" href="../admin">
+				<h1>JDK</h1>
+			</a>
+		</div>
+	</nav>
+	<section class="page-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto text-center">
+					<div class="text-uppercase">
+						<h1>Ticket purchased successfully!</h1>
+					</div>
+					<div>
+						<p>Thank you for your purchase, <strong>{{name}}</strong>!</p>
+						<p>We have sent a confirmation email to <strong>{{email}}</strong>.</p>
+						<p>You have purchased <strong>{{num}}</strong> tickets.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{{>footer}}
 </body>
+
 </html>
