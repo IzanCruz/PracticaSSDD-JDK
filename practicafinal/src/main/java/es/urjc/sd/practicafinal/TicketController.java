@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class TicketController {
 
-    private boolean control = true;    
+    private boolean control = true;
+
     @Autowired
     private TicketService ticketService; 
 
