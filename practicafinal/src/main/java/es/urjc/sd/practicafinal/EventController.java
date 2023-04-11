@@ -38,13 +38,10 @@ public class EventController {
          Event event = new Event(name, description,date,room);
         eventService.save(event);
 
-       
         model.addAttribute("name", name);
         model.addAttribute("description", description);
         model.addAttribute("date", date);
-        model.addAttribute("room", room);
-        
-
+        model.addAttribute("room", room);        
         
         return "eventConfirmation";
     }
