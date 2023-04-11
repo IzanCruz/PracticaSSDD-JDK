@@ -28,4 +28,8 @@ public class EventService {
     public Collection<Event> findAllList() {
        return eventRepository.findAll();
     }
+
+    public Event deleteEvent(Event event) {
+        return eventRepository.deleteEvent(event);
+    }
 }

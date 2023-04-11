@@ -1,6 +1,7 @@
 package es.urjc.sd.practicafinal;
 
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,20 +18,6 @@ public class EventController {
      @Autowired
     private EventService eventService; 
 
-    @GetMapping("/events1")
-    public String test1(Model model, String type) {
-       
-            Event event = new Event(EventType.TECNO, "TECNO","Event TECNO","16-05-23 23:30","Sala 2");
-            eventService.save(event);
-        
-            
-       
-        model.addAttribute("name", "REMEMBER");
-        model.addAttribute("date", "2020-12-12");
-        model.addAttribute("events", eventService.getByType(EventType.valueOf(type)));
-        eventService.findAllList();
-        return "showEvents"; 
-    }
 
     @PostMapping("/events/add")
     public String addTicket(@RequestParam("name") String name, @RequestParam("description") String description,
@@ -75,5 +62,11 @@ public class EventController {
         return "editEvent";
     }
 
+    @RequestMapping("/events/delete")
+    @DeleteMapping("/events/delete")
+    public String deleteEvent(Event event, Model model) {
+        eventService.deleteEvent(event);
+        return "eventDeleted";
+    }
     
 } 

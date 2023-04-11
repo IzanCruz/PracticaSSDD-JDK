@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 @RestController
 public class TicketAPIController {
@@ -33,18 +34,13 @@ public class TicketAPIController {
         
         return ticketService.findAllList();
      }
-
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/api/ticketsM")
-	public ResponseEntity<Ticket> createReview(@PathVariable Long id, @RequestBody Ticket ticket) {
+	public Ticket createReview(@RequestBody Ticket ticket) {
 
-		ticket.setId(id);
+		ticketService.save(ticket);
+        return ticket;
 
-		if(ticketService.save(ticket)){
-			return new ResponseEntity<>(ticket, HttpStatus.CREATED);
-		}else{
-			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-		}
-
-	}
+	    }
     }
  

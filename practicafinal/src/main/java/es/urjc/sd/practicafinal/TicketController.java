@@ -56,27 +56,5 @@ public class TicketController {
  
 }
 
-// @RestController
-// public class TicketController {
-    
-//     @Autowired
-//     private TicketService ticketService; 
 
-//     @GetMapping("/tickets")
-//     public List<Ticket> test(@RequestParam(defaultValue = "VIP") String type) {
-//         for (int i = 0; i < 3; i++) {
-//             Ticket ticket = new Ticket(TicketType.VIP, "Manolo");
-//             ticketService.save(ticket);
-//         }
-//         for (int i = 0; i < 3; i++) {
-//             Ticket ticket = new Ticket(TicketType.NORMAL, "Ruben");
-//             ticketService.save(ticket);
-//         }
-//         for (int i = 0; i < 3; i++) {
-//             Ticket ticket = new Ticket(TicketType.PREMIUM, "Jose Luis");
-//             ticketService.save(ticket);
-//         }
-//         return ticketService.getByType(TicketType.valueOf(type));
-//     }
-// }
 
