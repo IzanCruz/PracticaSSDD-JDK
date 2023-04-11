@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class TicketController {
-    
+
+    private boolean control = true;    
     @Autowired
     private TicketService ticketService; 
 
     @GetMapping("/tickets1")
     public String showTickets(Model model, @RequestParam(defaultValue = "VIP") String type) {
-       
+       if(control){
             Ticket ticket = new Ticket(TicketType.VIP, "Manolo","manolo@gmail.com",633943611);
             ticketService.save(ticket);
         
@@ -26,6 +27,8 @@ public class TicketController {
        
             Ticket ticket2 = new Ticket(TicketType.PREMIUM, "Jose Luis","js@gmail.com",603743011);
             ticketService.save(ticket2);
+            control = false;
+       }
        
         model.addAttribute("name", "REMEMBER");
         model.addAttribute("date", "2020-12-12");
