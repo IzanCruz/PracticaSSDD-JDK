@@ -25,6 +25,10 @@ public class EventRepository {
     public Collection<Event> findAll() {
         return events.values();
     }
+
+    public Event deleteEvent(Event event) {
+        return events.remove(event);
+    }
         
     
 }

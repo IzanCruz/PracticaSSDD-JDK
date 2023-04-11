@@ -8,6 +8,11 @@ public class Event {
     private String date;
     private String room;
     
+    
+
+    public Event() {
+    }
+
 
     public Event(Long id, String name, String date, String room) {
         this.id = id;
