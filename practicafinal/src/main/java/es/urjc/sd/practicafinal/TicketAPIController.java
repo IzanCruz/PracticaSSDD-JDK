@@ -1,6 +1,7 @@
 package es.urjc.sd.practicafinal;
 
-import java.util.List;
+import java.util.Collection;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ public class TicketAPIController {
      private TicketService ticketService; 
 
      @GetMapping("/api/tickets")
-     public List<Ticket> test(@RequestParam(defaultValue = "VIP") String type) {
+     public Collection<Ticket> test(@RequestParam(defaultValue = "VIP") String type) {
         
             Ticket ticket =  new Ticket(TicketType.VIP, "Manolo","manolo@gmail.com",633943611);
              ticketService.save(ticket);
@@ -30,7 +31,7 @@ public class TicketAPIController {
             Ticket ticket2 = new Ticket(TicketType.PREMIUM, "Jose Luis","js@gmail.com",603743011);
             ticketService.save(ticket2);
         
-        return ticketService.getByType(TicketType.valueOf(type));
+        return ticketService.findAllList();
      }
 
     @PostMapping("/api/ticketsM")
