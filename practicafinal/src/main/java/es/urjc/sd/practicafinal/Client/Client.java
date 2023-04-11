@@ -1,4 +1,4 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.Client;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;

@@ -1,4 +1,4 @@
-package es.urjc.sd.practicafinal;
+package es.urjc.sd.practicafinal.Event;
 
 
 import org.springframework.web.bind.annotation.DeleteMapping;
