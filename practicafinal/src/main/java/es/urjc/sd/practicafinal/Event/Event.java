@@ -10,15 +10,19 @@ import javax.persistence.Table;
 @Table(name = "event")
 public class Event {
 
-    @Id
     @Column(name = "ID")
     private long id;
+
+    @Id
     @Column(name = "NAME")
     private String name;
+    
     @Column(name = "DESCRIPTION")
     private String description;
+    
     @Column(name = "DATE")
     private String date;
+    
     @Column(name = "ROOM")
     private String room;
     
