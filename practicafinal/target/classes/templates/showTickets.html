@@ -19,18 +19,14 @@
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Evento</th>
                                     <th>Tipo de entrada</th>
-                                    <th>Numero de entradas</th>
                                 </tr>
                             </thead>
                             {{#tickets}}
                             <tr>
                                 <a id="{{client}}" class="book item"><i class="book icon"></i>
                                     <td>{{ client }}</td>
-                                    <td>{{ event }}</td>
                                     <td>{{ type }}</td>
-                                    <td>{{ num }}</td>
                                 </a>
                             </tr>
                             {{/tickets}}
