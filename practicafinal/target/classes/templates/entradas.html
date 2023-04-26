@@ -8,17 +8,18 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="home.html"><h1>JDK</h1></a>
+            <a class="navbar-brand" href="home.html">
+                <h1>JDK</h1>
+            </a>
         </div>
     </nav>
     <section class="page-section bg-dark" id="session">
         <div class="container">
             <div class="col-lg-8 mx-auto text-center">
                 {{#tickets}}
-                <img class="img mx-auto" src="assets/img/Sessions/{{ id }}.jpg" alt="...">
-                <h1>{{ name }}</h1>
-                <i class="text-muted">{{ date }}{{ room }}</i>
-                {{/tickets}}
+                <img class="img mx-auto" src="assets/img/logo1.2.png" alt="...">
+                <label></label>
+                <h1 class=" text-center">COMPRA DE ENTRADAS</h1>
             </div>
         </div>
     </section>
@@ -29,21 +30,44 @@
                     <!-- form for buying tickets -->
                     <form action="/tickets/add" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre Completo*" data-sb-validations="required">
-                            <div class="invalid-feedback" data-sb-feedback="name:required">Nombre y apellidos requeridos</div>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre Completo*"
+                                data-sb-validations="required">
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Nombre y apellidos requeridos
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="email"></label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email*" data-sb-validations="required" />
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email*"
+                                data-sb-validations="required" />
                             <div class="invalid-feedback" data-sb-feedback="email:required">Se necesita un correo</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">El correo introducido no es válido</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">El correo introducido no es
+                                válido</div>
                         </div>
-                        
+                        <div class="form-group">
+                            <label for="phone"></label>
+                            <input type="number" class="form-control" name="phone" id="phone" placeholder="Telefono*"
+                                data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">Debes poner un telefono
+                            </div>
+                            <div class="invalid-feedback" data-sb-feedback="phone:number">El telefono introducido no es
+                                valido</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="event"></label>
+                            <select>
+                                <option disabled selected>Evento*</option>
+                                <option>REMEMBER</option>
+                                <option>POP</option>
+                                <option>PRE-UNIVERSITY</option>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <div class="dropdown">
                                 <label for="num"></label>
-                                <input type="number" class="form-control" name="num" id="num" placeholder="Entradas*" min="1" max="10" data-sb-validations="required">
-                                <div class="invalid-feedback" data-sb-feedback="num:required">Necesitas por lo menos una entrada</div>
+                                <input type="number" class="form-control" name="num" id="num" placeholder="Entradas*"
+                                    min="1" max="10" data-sb-validations="required">
+                                <div class="invalid-feedback" data-sb-feedback="num:required">Necesitas por lo menos una
+                                    entrada</div>
                             </div>
                             <label></label>
                         </div>
@@ -52,7 +76,7 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
     </section>
 
     <!-- Footer-->
