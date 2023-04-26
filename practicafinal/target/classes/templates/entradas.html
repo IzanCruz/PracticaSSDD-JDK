@@ -54,11 +54,24 @@
                         </div>
                         <div class="form-group">
                             <label for="event"></label>
+                            <input class="form-control" name="event" id="event" placeholder="Evento*"
+                                data-sb-validations="required" />
                             <select>
                                 <option disabled selected>Evento*</option>
                                 <option>REMEMBER</option>
                                 <option>POP</option>
                                 <option>PRE-UNIVERSITY</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="type" id="type" placeholder="Tipo de entrada*"
+                                data-sb-validations="required" />
+                            <label for="type"></label>
+                            <select>
+                                <option disabled selected>Tipo de entrada*</option>
+                                <option>NORMAL</option>
+                                <option>VIP</option>
+                                <option>PREMIUM</option>
                             </select>
                         </div>
                         <div class="form-group">
