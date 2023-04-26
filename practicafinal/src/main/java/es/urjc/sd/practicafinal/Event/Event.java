@@ -1,5 +1,7 @@
 package es.urjc.sd.practicafinal.Event;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,14 +26,14 @@ public class Event {
     private String date;
     
     @Column(name = "ROOM")
-    private String room;
+    private int room;
     
     
     public Event() {
     }
 
 
-    public Event(Long id, String name, String date, String room) {
+    public Event(Long id, String name, String date, int room) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -39,7 +41,7 @@ public class Event {
     }
 
 
-    public Event(String name, String description, String date, String room){
+    public Event(String name, String description, String date, int room){
         this.name = name;
         this.description = description;
         this.date = date;
@@ -82,11 +84,11 @@ public class Event {
         this.date = date;
     }
 
-    public String getRoom() {
+    public int getRoom() {
         return room;
     }
 
-    public void setRoom(String room) {
+    public void setRoom(int room) {
         this.room = room;
     }
 

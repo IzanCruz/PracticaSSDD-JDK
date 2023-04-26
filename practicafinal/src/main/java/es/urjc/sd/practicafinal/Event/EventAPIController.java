@@ -16,44 +16,46 @@ import org.springframework.web.bind.annotation.PutMapping;
 @RestController
 public class EventAPIController {
 
- @Autowired
-     private EventService eventService; 
+	@Autowired
+	private EventService eventService;
 
-	 @GetMapping("/api/events")
+	@GetMapping("/api/events")
 	 
 		public Collection<Event> test() {
         
-            Event event = new Event("EVENTO1","NO PLANEADO","16-03-23","Sala 1");
+            Event event = new Event("EVENTO1","NO PLANEADO", "16-03-23", 1);
             eventService.save(event);
           
-            Event event1 = new Event("EVENTO2","NO PLANEADO","16-03-23","Sala 1");
+            Event event1 = new Event("EVENTO2","NO PLANEADO", "16-03-23", 2);
             eventService.save(event1);
         
-            Event event2 = new Event("EVENTO3","NO PLANEADO","16-03-23","Sala 1");
+            Event event2 = new Event("Evento3", "gndefvnds", "11-34-1122", 5);
             eventService.save(event2);
+
+			Event eventoPrueba = new Event("PRUEBA", "ikhgskdhsodofhsdoinfsonfosidnfsdf", "16-05-2023", 3);
+			eventService.save(eventoPrueba);
         
         return eventService.findAllList();
      }
-	 
 
-    @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/api/addEvents")
+	@ResponseStatus(HttpStatus.CREATED)
+	@PostMapping("/api/addEvents")
 	public Event createEvent(@RequestBody Event event) {
 		eventService.save(event);
 		return event;
-	
-		
-		}
+
+	}
+
 	@PutMapping("/api/editEvents")
-	public Event editEvent(@RequestBody Event event){
+	public Event editEvent(@RequestBody Event event) {
 		return event;
 	}
-	
+
 	@DeleteMapping("/api/deleteEvents")
-	public Event deleteEvent(@RequestBody Event event){
+	public Event deleteEvent(@RequestBody Event event) {
 		eventService.deleteEvent(event);
 		return event;
-		}
-    }
- 
+	}
+}
+
 

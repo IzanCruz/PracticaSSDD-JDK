@@ -21,7 +21,7 @@ public class EventController {
 
     @PostMapping("/events/add")
     public String addTicket(@RequestParam("name") String name, @RequestParam("description") String description,
-            @RequestParam("date") String date,  @RequestParam("room") String room, Model model) {
+            @RequestParam("date") String date,  @RequestParam("room") int room, Model model) {
 
          Event event = new Event(name, description,date,room);
         eventService.save(event);
@@ -45,7 +45,7 @@ public class EventController {
     @RequestMapping("/events/edit")
     @PutMapping("/events/edit")
     public String editEvent(@RequestParam("name") String name, @RequestParam("description") String description,
-    @RequestParam("date") String date,  @RequestParam("room") String room, Model model) {
+    @RequestParam("date") String date,  @RequestParam("room") int room, Model model) {
         Event event = new Event(name,description,date,room);
         eventService.save(event);
         

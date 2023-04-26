@@ -13,12 +13,12 @@ public class HomeController {
 
     private Event[] getSessions() {
        Event[] sessions = new Event[] {
-            new Event((long)1, "REMEMBER","13/05 23:00h","Sala 1"),
-            new Event((long)2, "TECHNO","14/05 23:30" ,"Sala 2"),
-            new Event((long)3, "PREUNIVERSIPARTY","05/05 23:00" ,"Sala 1"),
-            new Event((long)4, "REGGAETON","06/05 23:30" ,"Sala 2"),
-            new Event((long)5, "MÚSICA ESPAÑOLA","13/05 23:00" ,"Sala 2"),
-            new Event((long)6, "POP","13/05 23:30" ,"Sala 2"),
+            new Event((long)1, "REMEMBER","13/05 23:00h", 1),
+            new Event((long)2, "TECHNO","14/05 23:30" , 2),
+            new Event((long)3, "PREUNIVERSIPARTY","05/05 23:00" , 1),
+            new Event((long)4, "REGGAETON","06/05 23:30" , 2),
+            new Event((long)5, "MÚSICA ESPAÑOLA","13/05 23:00" ,2),
+            new Event((long)6, "POP","13/05 23:30" , 2),
         };
         return sessions;
     }
