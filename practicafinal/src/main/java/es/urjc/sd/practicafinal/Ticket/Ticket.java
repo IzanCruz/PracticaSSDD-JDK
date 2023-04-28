@@ -1,7 +1,8 @@
 package es.urjc.sd.practicafinal.Ticket;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,30 +11,24 @@ import javax.persistence.Table;
 public class Ticket {
 
     @Id
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "NAME")
-    private String client; 
+    private String name; 
 
-    @Column(name = "EMAIL")
     private String email;
 
-    @Column(name = "PHONE")
     private Long tlf;
 
-    @Column(name = "NUM")
-    private int num;
-
-    @Column(name = "TYPE")
     private TicketType type;
 
-    @Column(name = "EVENT")
+    private int num;
+
     private String event;
 
-    public Ticket(String client, String email, long tlf, int num, TicketType type, String event) {
+    public Ticket(String name, String email, long tlf, int num, TicketType type, String event) {
         this.type = type;
-        this.client = client;
+        this.name = name;
         this.email = email;
         this.num = num;
         this.tlf = tlf;
@@ -44,8 +39,8 @@ public class Ticket {
         return type;
     }
 
-    public String getClient() {
-        return client;
+    public String getName() {
+        return name;
     }
 
     public String getEvent(){
@@ -88,13 +83,13 @@ public class Ticket {
         this.tlf = tlf;
     }
 
-    public void setClient(String client) {
-        this.client = client;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Ticket [id=" + id + ", client=" + client + ", email=" + email + ", tlf=" + tlf + ", num=" + num + ", type=" + type + "]";
+        return "Ticket [id=" + id + ", name=" + name + ", email=" + email + ", tlf=" + tlf + ", num=" + num + ", type=" + type + "]";
     }
     
     

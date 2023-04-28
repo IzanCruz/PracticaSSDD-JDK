@@ -17,7 +17,7 @@ public class TicketService {
     }
     
     public boolean save(Ticket ticket) {
-        if (ticket.getClient() == null || ticket.getClient().isEmpty()) {
+        if (ticket.getName() == null || ticket.getName().isEmpty()) {
             return false;
         } else {
             ticketRepository.save(ticket);
