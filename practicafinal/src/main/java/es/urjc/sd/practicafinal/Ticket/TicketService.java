@@ -8,14 +8,15 @@ import java.util.List;
 
 @Service
 public class TicketService {
-    
+
     @Autowired
     private TicketRepository ticketRepository;
 
-    public List<Ticket> getByType(TicketType type) {
-        return ticketRepository.getByType(type);
+    public List<Ticket> getByType(String type) {
+        return ticketRepository.findByType(type);
     }
-    
+
+
     public boolean save(Ticket ticket) {
         if (ticket.getName() == null || ticket.getName().isEmpty()) {
             return false;
@@ -26,7 +27,6 @@ public class TicketService {
     }
 
     public Collection<Ticket> findAllList() {
-       return ticketRepository.findAll();
+        return ticketRepository.findAll();
     }
 }
-

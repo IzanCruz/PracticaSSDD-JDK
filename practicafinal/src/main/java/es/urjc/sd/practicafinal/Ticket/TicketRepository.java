@@ -1,30 +1,14 @@
 package es.urjc.sd.practicafinal.Ticket;
 
-import org.springframework.stereotype.Repository;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List; 
+import java.util.List;
 import java.util.stream.Collectors;
 
+public interface TicketRepository extends JpaRepository <Ticket, Long>{
 
-@Repository
-public class TicketRepository {
-    private HashMap<Long, Ticket> tickets = new HashMap<>();
-    private Long nextId = 0L;
+        List<Ticket> findByType(String type);
 
-    public List<Ticket> getByType(TicketType type) {
-        return tickets.values().stream().filter(t -> t.getType().equals(type)).collect(Collectors.toList());
-    }
-
-    public void save(Ticket ticket) {
-        
-        ticket.setId(nextId);
-        tickets.put(nextId++, ticket);}
-
-    public Collection<Ticket> findAll() {
-        return tickets.values();
-    }
-        
-    
+        List<Ticket> findByEvent(String event);
 }
