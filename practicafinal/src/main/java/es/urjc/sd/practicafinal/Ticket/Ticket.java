@@ -1,6 +1,5 @@
 package es.urjc.sd.practicafinal.Ticket;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,27 +7,32 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tickets")
+@Table
 public class Ticket {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
+
     private String name;
+
     private String email;
+
     private Long phone;
+
     private String event;
+
     private String type;
+
     private int num;
 
-
-    public Ticket(String name, String email, long phone, String event, int num, String type) {
-        this.type = type;
+    public Ticket(String name, String email, Long phone, String event, int num, String type) {
         this.name = name;
         this.email = email;
-        this.num = num;
         this.phone = phone;
         this.event = event;
+        this.num = num;
+        this.type = type;
     }
 
     public String getType() {
