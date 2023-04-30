@@ -1,42 +1,28 @@
 package es.urjc.sd.practicafinal.Others;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import es.urjc.sd.practicafinal.Event.Event;
+import es.urjc.sd.practicafinal.Event.EventService;
 
 @Controller
 public class HomeController {
-    
-   
 
-    private Event[] getSessions() {
-       Event[] sessions = new Event[] {
-            new Event((long)1, "REMEMBER","13/05 23:00h", 1),
-            new Event((long)2, "TECHNO","14/05 23:30" , 2),
-            new Event((long)3, "PREUNIVERSIPARTY","05/05 23:00" , 1),
-            new Event((long)4, "REGGAETON","06/05 23:30" , 2),
-            new Event((long)5, "MÚSICA ESPAÑOLA","13/05 23:00" ,2),
-            new Event((long)6, "POP","13/05 23:30" , 2),
-        };
-        return sessions;
-    }
-    
+    @Autowired
+    private EventService eventService;
+
     @GetMapping("/")
     public String home(Model model) {
-       Event[] sessions = getSessions();
-        model.addAttribute("sessions", sessions);
+        model.addAttribute("sessions", eventService.findAllList());
         return "home";
     }
 
     @GetMapping("/entradas")
     public String entradas(Model model) {
-        Event[] sessions = getSessions();
-        model.addAttribute("sessions", sessions);
+        model.addAttribute("sessions", eventService.findAllList());
         return "entradas";
     }
-
 
     @GetMapping("/login.html")
     public String login(Model model) {
@@ -45,16 +31,13 @@ public class HomeController {
 
     @GetMapping("/home.html")
     public String back(Model model) {
+        model.addAttribute("sessions", eventService.findAllList());
         return "home";
     }
 
-    @GetMapping("/entradas.html") 
-    public String vistaentradas(Model model){
+    @GetMapping("/entradas.html")
+    public String vistaentradas(Model model) {
         return "entradas";
     }
-    
-    
- 
-
 
 }

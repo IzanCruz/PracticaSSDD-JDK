@@ -21,18 +21,6 @@ public class EventAPIController {
 	 
 		public Collection<Event> test() {
         
-            Event event = new Event("EVENTO1","NO PLANEADO", "16-03-23", 1);
-            eventService.save(event);
-          
-            Event event1 = new Event("EVENTO2","NO PLANEADO", "16-03-23", 2);
-            eventService.save(event1);
-        
-            Event event2 = new Event("Evento3", "gndefvnds", "11-34-1122", 5);
-            eventService.save(event2);
-
-			Event eventoPrueba = new Event("PRUEBA", "ikhgskdhsodofhsdoinfsonfosidnfsdf", "16-05-2023", 3);
-			eventService.save(eventoPrueba);
-        
         return eventService.findAllList();
      }
 

@@ -13,17 +13,11 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String name;
-
     private String email;
-
     private Long phone;
-
     private String event;
-
     private String type;
-
     private int num;
 
     public Ticket(String name, String email, Long phone, String event, int num, String type) {

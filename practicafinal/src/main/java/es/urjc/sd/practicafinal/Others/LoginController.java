@@ -1,12 +1,21 @@
 package es.urjc.sd.practicafinal.Others;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import es.urjc.sd.practicafinal.Event.EventService;
+
+import org.springframework.ui.Model;
+
+
 @Controller
 public class LoginController {
+
+  @Autowired
+  private EventService eventService;
 
   @GetMapping("/login")
   public String showLoginForm() {
@@ -26,12 +35,14 @@ public class LoginController {
   
 
   @GetMapping("/admin")
-  public String showAdminPage() {
+  public String showAdminPage(Model model) {
+    model.addAttribute("sessions", eventService.findAllList());
     return "admin";
   }
 
   @GetMapping("/user")
-  public String showUserPage() {
+  public String showUserPage(Model model) {
+    model.addAttribute("sessions", eventService.findAllList());
     return "user";
   }
 
