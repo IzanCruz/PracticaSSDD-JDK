@@ -56,9 +56,15 @@ public class EventController {
         return "editEvent";
     }
 
+    @GetMapping("/deleteEvent")
+    public String deleteEventPage(Model model){
+        model.addAttribute("sessions", eventService.findAllList());
+        return "deleteEvent";
+    }
+
     @RequestMapping("/events/delete")
     @DeleteMapping("/events/delete")
-    public String deleteEvent(Event event, Model model) {
+    public String deleteEvent(@RequestParam Event event, Model model) {
         eventService.deleteEvent(event);
         return "eventDeleted";
     }
