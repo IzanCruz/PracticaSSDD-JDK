@@ -7,4 +7,5 @@ public interface EventRepository extends JpaRepository<Event, String> {
     List<Event> findByName(String name);
 
     List<Event> findByRoom(int room);
+
 }
