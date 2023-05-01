@@ -20,7 +20,12 @@ public class Ticket {
     private String type;
     private int num;
 
+    public Ticket(){
+
+    }
+
     public Ticket(String name, String email, Long phone, String event, int num, String type) {
+        super();
         this.name = name;
         this.email = email;
         this.phone = phone;

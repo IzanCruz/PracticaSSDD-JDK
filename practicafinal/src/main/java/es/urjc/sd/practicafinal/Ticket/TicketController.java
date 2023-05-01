@@ -20,7 +20,7 @@ public class TicketController {
     
         model.addAttribute("event", "REMEMBER");
         model.addAttribute("date", "2020-12-12");
-        model.addAttribute("tickets", ticketService.findAllList());
+        model.addAttribute("tickets", ticketService.getByType("NORMAL"));
        
         
         return "showTickets"; 
