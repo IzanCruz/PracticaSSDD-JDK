@@ -16,9 +16,7 @@ public class TicketController {
     @GetMapping("/tickets1")
     public String showTickets(Model model) {
 
-        model.addAttribute("event", "REMEMBER");
-        model.addAttribute("date", "2020-12-12");
-        model.addAttribute("tickets", ticketService.getByType("NORMAL"));
+        model.addAttribute("tickets", ticketService.findAllList());
 
         return "showTickets";
     }

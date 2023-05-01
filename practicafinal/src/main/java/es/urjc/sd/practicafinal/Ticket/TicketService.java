@@ -2,8 +2,6 @@ package es.urjc.sd.practicafinal.Ticket;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -25,7 +23,7 @@ public class TicketService {
         }
     }
 
-    public Collection<Ticket> findAllList() {
+    public List<Ticket> findAllList() {
         return ticketRepository.findAll();
     }
 }

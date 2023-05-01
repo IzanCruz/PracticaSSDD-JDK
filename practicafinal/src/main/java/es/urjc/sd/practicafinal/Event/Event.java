@@ -1,8 +1,6 @@
 package es.urjc.sd.practicafinal.Event;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
@@ -10,8 +8,6 @@ public class Event {
 
     @Id
     private String name;
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
     private String description;
     private String date;
     private int room;
@@ -27,13 +23,6 @@ public class Event {
         this.room = room;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -69,7 +58,7 @@ public class Event {
 
     @Override
     public String toString() {
-        return "Event [id=" + id + ", name=" + name + ", description=" + description + ", date="
+        return "Event [name=" + name + ", description=" + description + ", date="
                 + date + ", room=" + room + "]";
     }
 

@@ -67,7 +67,7 @@
     </section>
     <!-- About-->
     <section class="page-section" id="about">
-        <!-- <!-- Page where you can see the sessions offered by the nightclub and by being in the user session, you can buy tickets for the sessions -->
+        <!-- Page where you can see the sessions offered by the nightclub and by being in the user session, you can buy tickets for the sessions -->
         <!-- sessions Grid-->
         <section class="page-section bs-dark" id="sessions">
             <div class="container">
@@ -76,6 +76,7 @@
                     <h3 class="section-subheading text-muted">Tus entradas para las mejores sesiones aquí</h3>
                 </div>
                 <div class="row">
+                    {{#sessions}}
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- sessions item 1-->
                         <div class="sessions-item">
@@ -83,86 +84,15 @@
                                 <div class="sessions-hover">
                                     <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img" src="assets/img/sessions/1.jpg" alt="..." />
+                                <img class="img" src="assets/img/logo1.2.png" alt="..." />
                             </a>
                             <div class="sessions-caption">
-                                <div class="sessions-caption-heading">REMEMBER</div>
+                                <div class="sessions-caption-heading">{{ name }}</div>
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- sessions item 2-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal2">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/2.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">TECNO</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- sessions item 3-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal3">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="imgport3" src="assets/img/sessions/3.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">PREUNIVERSI-PARTY</div>
-                                <div class="sessions-caption-subheading text-muted">Solo menores 18</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- sessions item 4-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal4">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/4.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">REGGEATON</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- sessions item 5-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal5">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/5.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">MÚSICA ESPAÑOLA</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- sessions item 6-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal6">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/6.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">POP</div>
-
-                            </div>
-                        </div>
-                    </div>
+                    {{/sessions}}
                 </div>
             </div>
         </section>
@@ -257,8 +187,9 @@
         <!-- sessions Modals-->
         <!-- It shows the information that will be shown in the sessions when clicking the plus button, 
             where information about what the session will deal with will be shown -->
+
+        {{#sessions}}
         <!-- sessions item 1 modal popup-->
-        {#sessions}
         <div class="sessions-modal modal fade" id="sessionsModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -271,7 +202,8 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">{{ name }}</h2>
                                     <p class="item-intro text-black"><strong>{{ date }}, {{ room }}</strong></p>
-                                    <img class="imgE d-block mx-auto" src="assets/img/sessions/{{ id }}.jpg" alt="..." />
+                                    <img class="imgE d-block mx-auto" src="assets/img/logo1.2.png"
+                                        alt="..." />
                                     <p>{{ description }}
                                     </p>
 
@@ -287,7 +219,7 @@
                 </div>
             </div>
         </div>
-        {/sessions}
+        {{/sessions}}
     </section>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

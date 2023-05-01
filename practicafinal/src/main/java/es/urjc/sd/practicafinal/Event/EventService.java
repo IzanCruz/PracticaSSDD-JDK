@@ -2,8 +2,6 @@ package es.urjc.sd.practicafinal.Event;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -12,8 +10,12 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
-    public List<Event> getByType(String name) {
+    public List<Event> getByName(String name) {
         return eventRepository.findByName(name);
+    }
+
+    public List<Event> getByRoom(int room){
+        return eventRepository.findByRoom(room);
     }
 
     public boolean save(Event event) {
@@ -25,7 +27,7 @@ public class EventService {
         }
     }
 
-    public Collection<Event> findAllList() {
+    public List<Event> findAllList() {
         return eventRepository.findAll();
     }
 
