@@ -14,6 +14,10 @@ public class TicketService {
         return ticketRepository.findByType(type);
     }
 
+    public List<Ticket> getByEvent(String event){
+        return ticketRepository.findByEvent(event);
+    }
+
     public boolean save(Ticket ticket) {
         if (ticket.getName() == null || ticket.getName().isEmpty()) {
             return false;

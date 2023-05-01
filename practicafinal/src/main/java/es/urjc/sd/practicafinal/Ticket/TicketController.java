@@ -7,16 +7,29 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import es.urjc.sd.practicafinal.Event.EventService;
+
 @Controller
 public class TicketController {
 
     @Autowired
     private TicketService ticketService;
+    @Autowired EventService eventService;
 
     @GetMapping("/tickets1")
-    public String showTickets(Model model) {
+    public String showTickets1(Model model) {
 
         model.addAttribute("tickets", ticketService.findAllList());
+        model.addAttribute("sessions", eventService.findAllList());
+
+        return "showTickets";
+    }
+
+    @GetMapping("/tickets")
+    public String showTickets(Model model, @RequestParam(defaultValue = "REMEMBER") String event) {
+
+        model.addAttribute("tickets", ticketService.getByEvent(event));
+        model.addAttribute("sessions", eventService.findAllList());
 
         return "showTickets";
     }
