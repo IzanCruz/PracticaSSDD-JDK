@@ -56,10 +56,9 @@
                             <select class="form-control" name="event" id="event" placeholder="Evento*"
                                 data-sb-validations="required">
                                 <option disabled selected>Evento*</option>
-                                <option>REMEMBER</option>
-                                <option>POP</option>
-                                <option>MÚSICA ESPAÑOLA</option>
-                                <option>PRE-UNIVERSITY</option>
+                                {{#sessions}}
+                                <option>{{ name }}</option>
+                                {{/sessions}}
                             </select>
                             <div class="invalid-feedback" data-sb-feedback="event:required">Debes seleccionar un evento
                             </div>

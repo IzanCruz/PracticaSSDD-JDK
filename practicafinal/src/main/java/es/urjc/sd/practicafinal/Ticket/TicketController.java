@@ -38,6 +38,14 @@ public class TicketController {
         return "showTickets";
     }
 
+    @GetMapping("/buyTickets")
+    public String buyTickets(Model model) {
+
+        model.addAttribute("sessions", eventService.findAllList());
+
+        return "entradas";
+    }
+
     @PostMapping("/tickets/add")
     public String addTicket(@RequestParam("name") String name, @RequestParam("email") String email,
             @RequestParam("phone") long phone,
