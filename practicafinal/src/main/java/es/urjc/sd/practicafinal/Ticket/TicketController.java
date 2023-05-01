@@ -7,28 +7,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
-
 @Controller
 public class TicketController {
-    
+
     @Autowired
-    private TicketService ticketService; 
+    private TicketService ticketService;
 
     @GetMapping("/tickets1")
     public String showTickets(Model model) {
-    
+
         model.addAttribute("event", "REMEMBER");
         model.addAttribute("date", "2020-12-12");
         model.addAttribute("tickets", ticketService.getByType("NORMAL"));
-       
-        
-        return "showTickets"; 
+
+        return "showTickets";
     }
 
     @PostMapping("/tickets/add")
-    public String addTicket(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("phone") long phone,
-            @RequestParam("type") String type, @RequestParam("num") int num, @RequestParam("event") String event, Model model) {
+    public String addTicket(@RequestParam("name") String name, @RequestParam("email") String email,
+            @RequestParam("phone") long phone,
+            @RequestParam("type") String type, @RequestParam("num") int num, @RequestParam("event") String event,
+            Model model) {
 
         // Guardar los datos del ticket en la base de datos o donde corresponda
         Ticket ticket = new Ticket(name, email, phone, event, num, type);
@@ -46,9 +45,4 @@ public class TicketController {
         return "ticketConfirmation";
     }
 
-
- 
 }
-
-
-

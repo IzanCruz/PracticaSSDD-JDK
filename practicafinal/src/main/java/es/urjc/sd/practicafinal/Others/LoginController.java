@@ -10,7 +10,6 @@ import es.urjc.sd.practicafinal.Event.EventService;
 
 import org.springframework.ui.Model;
 
-
 @Controller
 public class LoginController {
 
@@ -23,16 +22,15 @@ public class LoginController {
   }
 
   @RequestMapping("/login2")
-    public String submitLoginForm(@RequestParam String username, @RequestParam String password) {
-        if (username.equals("admin") && password.equals("1234")) {
-            return "redirect:/admin";
-        } else if (username.equals("usuario") && password.equals("1234")) {
-            return "redirect:/user";
-        } else {
-            return "redirect:/error";
-        }
+  public String submitLoginForm(@RequestParam String username, @RequestParam String password) {
+    if (username.equals("admin") && password.equals("1234")) {
+      return "redirect:/admin";
+    } else if (username.equals("usuario") && password.equals("1234")) {
+      return "redirect:/user";
+    } else {
+      return "redirect:/error";
     }
-  
+  }
 
   @GetMapping("/admin")
   public String showAdminPage(Model model) {
@@ -52,4 +50,3 @@ public class LoginController {
   }
 
 }
-

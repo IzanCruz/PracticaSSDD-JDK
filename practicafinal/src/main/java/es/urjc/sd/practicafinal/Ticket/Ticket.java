@@ -20,7 +20,7 @@ public class Ticket {
     private String type;
     private int num;
 
-    public Ticket(){
+    public Ticket() {
 
     }
 

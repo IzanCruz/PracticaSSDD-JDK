@@ -6,50 +6,44 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "event")
 public class Event {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
     @Id
     private String name;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String description;
     private String date;
     private int room;
-    
-    
+
     public Event() {
     }
 
-
-    public Event(String name, String description, String date, int room){
+    public Event(String name, String description, String date, int room) {
         super();
         this.name = name;
         this.description = description;
         this.date = date;
         this.room = room;
-        }
-
+    }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
 
-     public String getName() {
+    public String getName() {
         return name;
     }
 
     public String getDescription() {
         return description;
     }
-
-   
 
     public void setName(String name) {
         this.name = name;
@@ -62,7 +56,6 @@ public class Event {
     public String getDate() {
         return date;
     }
-
 
     public void setDate(String date) {
         this.date = date;
@@ -82,9 +75,4 @@ public class Event {
                 + date + ", room=" + room + "]";
     }
 
-    
-    
-
-   
-    
 }

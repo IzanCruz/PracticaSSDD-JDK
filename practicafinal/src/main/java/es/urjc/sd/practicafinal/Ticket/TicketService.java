@@ -16,7 +16,6 @@ public class TicketService {
         return ticketRepository.findByType(type);
     }
 
-
     public boolean save(Ticket ticket) {
         if (ticket.getName() == null || ticket.getName().isEmpty()) {
             return false;
