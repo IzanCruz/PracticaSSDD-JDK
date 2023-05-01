@@ -14,7 +14,8 @@ public class TicketController {
 
     @Autowired
     private TicketService ticketService;
-    @Autowired EventService eventService;
+    @Autowired
+    EventService eventService;
 
     @GetMapping("/tickets1")
     public String showTickets1(Model model) {
@@ -26,10 +27,13 @@ public class TicketController {
     }
 
     @GetMapping("/tickets")
-    public String showTickets(Model model, @RequestParam(defaultValue = "REMEMBER") String event) {
-
-        model.addAttribute("tickets", ticketService.getByEvent(event));
+    public String showTickets(Model model, @RequestParam String event) {
         model.addAttribute("sessions", eventService.findAllList());
+        if (event.equals("Todos")) {
+            model.addAttribute("tickets", ticketService.findAllList());
+        } else {
+            model.addAttribute("tickets", ticketService.getByEvent(event));
+        }
 
         return "showTickets";
     }

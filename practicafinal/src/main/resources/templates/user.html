@@ -80,7 +80,7 @@
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- sessions item 1-->
                         <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal1">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal{{ name }}">
                                 <div class="sessions-hover">
                                     <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -189,29 +189,29 @@
             where information about what the session will deal with will be shown -->
 
         {{#sessions}}
-        <!-- sessions item 1 modal popup-->
-        <div class="sessions-modal modal fade" id="sessionsModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                            alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">{{ name }}</h2>
-                                    <p class="item-intro text-black"><strong>{{ date }}, {{ room }}</strong></p>
-                                    <img class="imgE d-block mx-auto" src="assets/img/logo1.2.png"
-                                        alt="..." />
-                                    <p>{{ description }}
-                                    </p>
+        <div>
+            <div class="sessions-modal modal fade" id="sessionsModal{{ name }}" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                                alt="Close modal" /></div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="modal-body">
+                                        <!-- Project details-->
+                                        <h2 class="text-uppercase">{{ name }}</h2>
+                                        <p class="item-intro text-black"><strong>{{ date }}, Sala {{ room }}</strong></p>
+                                        <img class="imgE d-block mx-auto" src="assets/img/logo1.2.png" alt="..." />
+                                        <p>{{ description }}
+                                        </p>
 
-                                    <!-- the main difference with the rest of the views is that the buy button is activated -->
-                                    <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                            data-bs-dismiss="modal" type="button">
-                                            COMPRAR ENTRADAS
-                                        </button></a>
+                                        <!-- the main difference with the rest of the views is that the buy button is activated -->
+                                        <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                                data-bs-dismiss="modal" type="button">
+                                                COMPRAR ENTRADAS
+                                            </button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

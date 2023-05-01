@@ -11,20 +11,22 @@
         </div>
     </nav>
     <section class="page-section">
-        <div>
-            <form action="/tickets">
-                <div class="form-group">
-                    <label for="event"></label>
-                    <select class="form-control" name="event" id="event" placeholder="Evento*"
-                        data-sb-validations="required">
-                        <option disabled selected>Evento</option>
-                        {{#sessions}}
-                        <option>{{ name }}</option>
-                        {{/sessions}}
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary" name="submit">FILTRAR</button>
-            </form>
+        <div class="container">
+            <div class="row">
+                <form action="/tickets">
+                    <div class="form-group">
+                        <label for="event"></label>
+                        <select class="form-control" name="event" id="event" placeholder="Evento*"
+                            data-sb-validations="required">
+                            <option selected>Todos</option>
+                            {{#sessions}}
+                            <option>{{ name }}</option>
+                            {{/sessions}}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="submit">FILTRAR</button>
+                </form>
+            </div>
         </div>
         <div class="container">
             <div class="row">
