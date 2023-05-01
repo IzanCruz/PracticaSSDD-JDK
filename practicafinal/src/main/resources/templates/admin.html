@@ -78,94 +78,23 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
+                    {{#sessions}}
                     <!-- sessions item 1-->
                     <div class="sessions-item">
-                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal1">
+                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal{{ name }}">
                             <div class="sessions-hover">
                                 <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img" src="assets/img/sessions/1.jpg" alt="..." />
+                            <img class="img" src="assets/img/logo1.2.png" alt="..." />
                         </a>
                         <div class="sessions-caption">
-                            <div class="sessions-caption-heading">REMEMBER</div>
+                            <div class="sessions-caption-heading">{{ name }}</div>
 
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- sessions item 2-->
-                    <div class="sessions-item">
-                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal2">
-                            <div class="sessions-hover">
-                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img" src="assets/img/sessions/2.jpg" alt="..." />
-                        </a>
-                        <div class="sessions-caption">
-                            <div class="sessions-caption-heading">TECNO</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- sessions item 3-->
-                    <div class="sessions-item">
-                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal3">
-                            <div class="sessions-hover">
-                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="imgport3" src="assets/img/sessions/3.jpg" alt="..." />
-                        </a>
-                        <div class="sessions-caption">
-                            <div class="sessions-caption-heading">PREUNIVERSI-PARTY</div>
-                            <div class="sessions-caption-subheading text-muted">Solo menores 18</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <!-- sessions item 4-->
-                    <div class="sessions-item">
-                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal4">
-                            <div class="sessions-hover">
-                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img" src="assets/img/sessions/4.jpg" alt="..." />
-                        </a>
-                        <div class="sessions-caption">
-                            <div class="sessions-caption-heading">REGGEATON</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                    <!-- sessions item 5-->
-                    <div class="sessions-item">
-                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal5">
-                            <div class="sessions-hover">
-                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img" src="assets/img/sessions/5.jpg" alt="..." />
-                        </a>
-                        <div class="sessions-caption">
-                            <div class="sessions-caption-heading">MÚSICA ESPAÑOLA</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <!-- sessions item 6-->
-                    <div class="sessions-item">
-                        <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal6">
-                            <div class="sessions-hover">
-                                <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img" src="assets/img/sessions/6.jpg" alt="..." />
-                        </a>
-                        <div class="sessions-caption">
-                            <div class="sessions-caption-heading">POP</div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    {{/sessions}}
     </section>
     <div class="centered-button">
         <a href="createEvent.html"><button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
@@ -278,7 +207,7 @@
             where information about what the session will deal with will be shown -->
     <!-- sessions item 1 modal popup-->
     {{#sessions}}
-    <div class="sessions-modal modal fade" id="sessionsModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="sessions-modal modal fade" id="sessionsModal{{ name }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"

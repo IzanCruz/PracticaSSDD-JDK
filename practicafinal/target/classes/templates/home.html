@@ -80,94 +80,22 @@
                     <h3 class="section-subheading text-muted">Tus entradas para las mejores sesiones aquí</h3>
                 </div>
                 <div class="row">
+                    {{#sessions}}
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- sessions item 1-->
                         <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal1">
+                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal{{ name }}">
                                 <div class="sessions-hover">
                                     <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img" src="assets/img/sessions/1.jpg" alt="..." />
+                                <img class="img" src="assets/img/logo1.2.png" alt="..." />
                             </a>
                             <div class="sessions-caption">
-                                <div class="sessions-caption-heading">REMEMBER</div>
-
-
+                                <div class="sessions-caption-heading">{{ name }}</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- sessions item 2-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal2">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/2.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">TECNO</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- sessions item 3-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal3">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="imgport3" src="assets/img/sessions/3.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">PREUNIVERSI-PARTY</div>
-                                <div class="sessions-caption-subheading text-muted">Solo menores 18</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- sessions item 4-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal4">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/4.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">REGGEATON</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- sessions item 5-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal5">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/5.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">MÚSICA ESPAÑOLA</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- sessions item 6-->
-                        <div class="sessions-item">
-                            <a class="sessions-link" data-bs-toggle="modal" href="#sessionsModal6">
-                                <div class="sessions-hover">
-                                    <div class="sessions-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img" src="assets/img/sessions/6.jpg" alt="..." />
-                            </a>
-                            <div class="sessions-caption">
-                                <div class="sessions-caption-heading">POP</div>
-
-                            </div>
-                        </div>
-                    </div>
+                    {{/sessions}}
                 </div>
             </div>
         </section>
@@ -263,215 +191,37 @@
         <!-- sessions Modals-->
         <!-- Information about the sessions and what will happen in each one of them, when viewed anonymously, 
             only the information of each session will be seen -->
-            
-<!-- sessions item 1 modal popup-->
-<div class="sessions-modal modal fade" id="sessionsModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                    alt="Close modal" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">REMEMBER</h2>
-                            <p class="item-intro text-black"><strong>14/05 23:00h Sala 1</strong></p>
-                            <img class="imgE d-block mx-auto" src="assets/img/sessions/1.jpg" alt="..." />
-                            <p>¡Atención fanático del reggaetón! Prepárate para bailar toda la noche con los
-                                éxitos de los artistas más influyentes de la época dorada del reggaetón.
-                                <strong>Daddy Yankee, Wisin y Yandel, Don Omar, Tego Calderón, Zion y
-                                    Lennox</strong> y muchos más. ¡No pierdas la oportunidad de revivir los
-                                mejores hits del reggaetón con tus amigos y conocidos!
-                            </p>
-
-                            <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                    data-bs-dismiss="modal" type="button" id="buyButton">
-                                    COMPRAR ENTRADAS
-                                </button></a>
+        {{#sessions}}
+        <div>
+            <div class="sessions-modal modal fade" id="sessionsModal{{ name }}" tabindex="-1" role="dialog"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                                alt="Close modal" /></div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="modal-body">
+                                        <!-- Project details-->
+                                        <h2 class="text-uppercase">{{ name }}</h2>
+                                        <p class="item-intro text-black"><strong>{{ date}}, Sala {{ room }}</strong></p>
+                                        <img class="imgE d-block mx-auto" src="assets/img/logo1.2.png" alt="..." />
+                                        <p>{{ description }}
+                                        </p>
+                                        <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
+                                                data-bs-dismiss="modal" type="button" id="buyButton">
+                                                COMPRAR ENTRADAS
+                                            </button></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- sessions item 2 modal popup-->
-<div class="sessions-modal modal fade" id="sessionsModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                    alt="Close modal" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">TECNO</h2>
-                            <p class="item-intro text-black">14/03/2023 23:30 Sala 2</p>
-                            <img class="imgE d-block mx-auto" src="assets/img/sessions/2.jpg" alt="..." />
-                            <p>¡Bienvenidos a la fiesta tecno del año! Prepárate para una experiencia única con
-                                algunos de los mejores DJ del mundo como Carl Cox,
-                                Richie Hawtin y Charlotte de Witte. La pista de baile estará iluminada con luces
-                                de neón y las proyecciones en pantalla gigante te
-                                sumergirán en la música electrónica innovadora y emocionante. ¡No te pierdas
-                                esta oportunidad de bailar hasta el amanecer y sumergirte en un
-                                mundo de felicidad y alegría!</p>
-
-                            <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                    data-bs-dismiss="modal" type="button" id="buyButton">
-                                    COMPRAR ENTRADAS
-                                </button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- sessions item 3 modal popup-->
-<div class="sessions-modal modal fade" id="sessionsModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                    alt="Close modal" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">PREUNIVERSI-PARTY</h2>
-                            <p class="item-intro text-black">05/05/2023 23:00 Sala 1</p>
-                            <img class="imgE d-block mx-auto" src="assets/img/sessions/3.jpg" alt="..." />
-                            <p>La fiesta pre universitaria del año está aquí. Baila con tus amigos y conoce a
-                                nuevas personas.
-                                La música es variada, desde pop hasta reggaetón. Habrá concursos de baile y
-                                canto, así como un escenario
-                                de karaoke. La pista de baile estará iluminada con luces de neón. ¡No te pierdas
-                                esta noche llena de diversión!</p>
-
-                            <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                    data-bs-dismiss="modal" type="button" id="buyButton">
-                                    COMPRAR ENTRADAS
-                                </button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- sessions item 4 modal popup-->
-<div class="sessions-modal modal fade" id="sessionsModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                    alt="Close modal" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">REGGEATON</h2>
-                            <p class="item-intro text-black">06/05/2023 23:30 Sala 2</p>
-                            <img class="imgE d-block mx-auto" src="assets/img/sessions/4.jpg" alt="..." />
-                            <p>¡La fiesta de reggaetón más caliente del año ha llegado! Disfruta de una noche
-                                llena de ritmo
-                                con los mejores artistas del género. La música será completamente de reggaetón,
-                                desde los clásicos
-                                hasta los últimos éxitos. La pista de baile estará iluminada con luces de
-                                colores y efectos especiales,
-                                habrá concursos de baile y un bar para que disfrutes de tus bebidas favoritas.
-                                Únete a tus amigos y
-                                conoce a nuevas personas que comparten tus gustos musicales. ¡No te pierdas la
-                                oportunidad de bailar
-                                toda la noche en la fiesta de reggaetón más caliente del año!</p>
-
-                            <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                    data-bs-dismiss="modal" type="button" id="buyButton">
-                                    COMPRAR ENTRADAS
-                                </button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- sessions item 5 modal popup-->
-<div class="sessions-modal modal fade" id="sessionsModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                    alt="Close modal" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">MÚSICA ESPAÑOLA</h2>
-                            <p class="item-intro text-black">13/05/2023 23:00 Sala 1 </p>
-                            <img class="imgE d-block mx-auto" src="assets/img/sessions/5.jpg" alt="..." />
-                            <p>Bienvenido a la fiesta con las mejores canciones que han marcado a la historia de
-                                la
-                                musica española, podrás disfrutar desde las canciones más antiguas hasta el pop
-                                español,
-                                más actual. Preparate para darlo todo y cantar a pleno pulmón !!!!!!
-                            </p>
-
-                            <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                    data-bs-dismiss="modal" type="button" id="buyButton">
-                                    COMPRAR ENTRADAS
-                                </button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- sessions item 6 modal popup-->
-<div class="sessions-modal modal fade" id="sessionsModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                    alt="Close modal" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">POP</h2>
-                            <p class="item-intro text-black">13/05/2023 23:30 Sala 2</p>
-                            <img class="imgE d-block mx-auto" src="assets/img/sessions/6.jpg" alt="..." />
-                            <p>La fiesta de música pop más divertida del año ha llegado! Disfruta de una noche
-                                llena
-                                de ritmo con los mejores éxitos pop de todos los tiempos. Habrá concursos de
-                                baile y
-                                canto, karaoke y una zona de fotos. Además, podrás disfrutar de tus bebidas
-                                favoritas
-                                en el bar mientras bailas con tus amigos. Únete a la diversión y conoce a nuevas
-                                personas
-                                que comparten tus gustos musicales en la fiesta de música pop más emocionante
-                                del año.</p>
-
-                            <a href="entradas.html"><button class="btn btn-primary btn-xl text-uppercase"
-                                    data-bs-dismiss="modal" type="button" id="buyButton">
-                                    COMPRAR ENTRADAS
-                                </button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-        
+        {{/sessions}}
     </section>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
