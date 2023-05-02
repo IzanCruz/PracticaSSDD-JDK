@@ -5,16 +5,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import es.urjc.sd.practicafinal.Ticket.Ticket;
+import es.urjc.sd.practicafinal.Ticket.TicketService;
+
 
 @Controller
 public class EventController {
 
     @Autowired
     private EventService eventService;
+
+    @Autowired
+    private TicketService ticketService;
+
 
     @PostMapping("/events/add")
     public String addTicket(@RequestParam("name") String name, @RequestParam("description") String description,
@@ -65,6 +76,12 @@ public class EventController {
     @RequestMapping("/events/delete")
     @DeleteMapping("/events/delete")
     public String deleteEvent(@RequestParam Event event, Model model) {
+        if(ticketService.getByEvent(event.getName()).size() != 0){
+            List<Ticket> aux = ticketService.getByEvent(event.getName());
+            for(int i = 0; i < aux.size(); i++){
+                ticketService.delete(aux.get(i));
+            }
+        }
         eventService.deleteEvent(event);
         return "eventDeleted";
     }

@@ -1,9 +1,12 @@
 package es.urjc.sd.practicafinal.Ticket;
 
+import es.urjc.sd.practicafinal.Event.Event;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,12 +22,15 @@ public class Ticket {
     private String event;
     private String type;
     private int num;
+    @ManyToOne
+    @JoinColumn(name = "event_name", referencedColumnName = "name")
+    private Event events;
 
     public Ticket() {
 
     }
 
-    public Ticket(String name, String email, Long phone, String event, int num, String type) {
+    public Ticket(String name, String email, Long phone, String event, int num, String type, Event events) {
         super();
         this.name = name;
         this.email = email;
@@ -32,6 +38,15 @@ public class Ticket {
         this.event = event;
         this.num = num;
         this.type = type;
+        this.events = events;
+    }
+
+    public Event getEvents(){
+        return events;
+    }
+
+    public void setEvents(Event events){
+        this.events = events;
     }
 
     public String getType() {

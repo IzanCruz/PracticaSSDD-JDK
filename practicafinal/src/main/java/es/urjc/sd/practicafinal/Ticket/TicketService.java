@@ -30,4 +30,8 @@ public class TicketService {
     public List<Ticket> findAllList() {
         return ticketRepository.findAll();
     }
+
+    public void delete(Ticket ticket){
+        ticketRepository.delete(ticket);
+    }
 }

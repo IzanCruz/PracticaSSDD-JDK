@@ -1,7 +1,11 @@
 package es.urjc.sd.practicafinal.Event;
 
+import java.util.List;
+import es.urjc.sd.practicafinal.Ticket.Ticket;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Event {
@@ -11,6 +15,7 @@ public class Event {
     private String description;
     private String date;
     private int room;
+
 
     public Event() {
     }
@@ -23,6 +28,14 @@ public class Event {
         this.room = room;
     }
 
+    public Event (Event event){
+        super();
+        this.name = event.getName();
+        this.description = event.getDescription();
+        this.date = event.getDate();
+        this.room = event.getRoom();
+    }
+
 
     public String getName() {
         return name;
@@ -31,6 +44,7 @@ public class Event {
     public String getDescription() {
         return description;
     }
+
 
     public void setName(String name) {
         this.name = name;
