@@ -1,0 +1,28 @@
+
+.col{
+    background-color: #fff;
+    width:100%;
+    
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: #00000059 0px 5px 15px;
+}
+
+.box{
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.first{
+    border-right: 2px solid #40576d33;
+}
+
+input[type=number]{
+    outline: none; 
+    border: none;
+    width: 50px;
+    color: #131c35;
+    font-size: 24px;
+    padding: 10px 0px;
+    margin-left: 10px;
+}
