@@ -11418,3 +11418,11 @@ section#contact form#contactForm :-ms-input-placeholder {
 .centered-button a {
   margin: 10px;
 }
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
+}
