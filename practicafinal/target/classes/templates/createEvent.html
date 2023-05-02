@@ -14,19 +14,19 @@
   <section class="page-section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
+        <div class="col-lg-8 mx-auto">
           <div class="text-uppercase">
-            <h1>CREAR EVENTO</h1>
+            <h1 class="text-center">CREAR EVENTO</h1>
           </div>
           <form method="POST" action="/events/add">
             <div class="form-group">
-              <label for="name">Nombre del evento*</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="" required>
+              <label for="name" class="text-align = left;">Nombre del evento*</label>
+              <input type="text" class="form-control  text-center" id="name" name="name" placeholder="" required>
               <br>
             </div>
             <div class="form-group">
-              <label for="description">Descripcion del evento*</label>
-              <div id="description" class="form-control" contenteditable="true" placeholder="" style="text-align: left;"></div>
+              <label for="description" class="text-align = left;">Descripcion del evento*</label>
+              <div id="description" class="form-control text-center" contenteditable="true" placeholder="" style="text-align: left;"></div>
               <div class="text-toolbar">
                 <button class="btn btn-secondary" type="button" onclick="document.execCommand('bold', false, null);"><i class="fas fa-bold"></i></button>
                 <button class="btn btn-secondary" type="button" onclick="document.execCommand('italic', false, null);"><i class="fas fa-italic"></i></button>
@@ -37,17 +37,17 @@
               <br>
             </div>
             <div class="form-group">
-              <label for="date">Fecha del evento*</label>
-              <input type="date" class="form-control" id="date" name="date" placeholder="" required>
+              <label for="date" class="text-align = left;">Fecha del evento*</label>
+              <input type="date" class="form-control text-center" id="date" name="date" placeholder="" required>
               <br>
             </div>
             <div class="form-group">
-              <label for="room">Sala para el evento*</label>
-              <input type="text" class="form-control" id="room" name="room" placeholder="" required>
+              <label for="room" class="text-align = left;">Sala para el evento*</label>
+              <input type="text" class="form-control text-center" id="room" name="room" placeholder="" required>
               <br>
             </div>
             <label></label>
-            <button class="btn btn-primary" type="submit" onclick="formatDescription();">CREAR EVENTO</button>
+            <button class="btn btn-primary text-center" type="submit" onclick="formatDescription();">CREAR EVENTO</button>
           </form>
         </div>
       </div>

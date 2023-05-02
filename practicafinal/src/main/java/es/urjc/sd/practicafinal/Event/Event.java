@@ -1,11 +1,7 @@
 package es.urjc.sd.practicafinal.Event;
 
-import java.util.List;
-import es.urjc.sd.practicafinal.Ticket.Ticket;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class Event {
