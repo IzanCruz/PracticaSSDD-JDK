@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "dfa1eac1-ffa7-46c4-9045-1cec6e46662b",
+		"name": "PostmanParte2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26370846"
+	},
+	"item": [
+		{
+			"name": "GetTickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/tickets"
+			},
+			"response": []
+		},
+		{
+			"name": "PostTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"PEDRO\",\r\n        \"email\": \"aeu@gmail.com\",\r\n        \"phone\": 123336789,\r\n        \"event\": \"REGGEATON\",\r\n        \"type\": \"VIP\",\r\n        \"num\": 2,\r\n        \"events\": {\r\n            \"name\": \"REGGEATON\",\r\n            \"description\": \"¡La fiesta de reggaetón más caliente del año ha llegado! Disfruta de una noche llena de ritmo con los mejores artistas del género. La música será completamente de reggaetón, desde los clásicos hasta los últimos éxitos. La pista de baile estará iluminada con luces de colores y efectos especiales, habrá concursos de baile y un bar para que disfrutes de tus bebidas favoritas. Únete a tus amigos y conoce a nuevas personas que comparten tus gustos musicales. ¡No te pierdas la oportunidad de bailar toda la noche en la fiesta de reggaetón más caliente del año!\",\r\n            \"date\": \"06/05/2023\",\r\n            \"room\": 2\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/ticketsM"
+			},
+			"response": []
+		},
+		{
+			"name": "GetEvents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/events"
+			},
+			"response": []
+		},
+		{
+			"name": "PostEvent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"EVENTO DE PRUEBA\",\r\n        \"description\": \"Bpruebas y pruebas\",\r\n        \"room\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/addEvents"
+			},
+			"response": []
+		},
+		{
+			"name": "PutEvent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"EVENTOo DE PRUEBA\",\r\n        \"description\": \"Bpruebas y pruebas\",\r\n        \"date\": \"11-08-2024\",\r\n        \"room\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/editEvents"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEvent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"EVENTO DE PRUEBA\",\r\n        \"description\": \"Bpruebas y pruebas\",\r\n        \"date\": null,\r\n        \"room\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/deleteEvents"
+			},
+			"response": []
+		}
+	]
+}
