@@ -48,8 +48,8 @@ public class EventController {
             @RequestParam("date") String date, @RequestParam("room") int room,
             @RequestParam("event_name") String event_name,
             Model model) {
+
         Event event = new Event(name, description, date, room);
-        eventService.save(event);
 
         if (ticketService.getByEvent(event_name).size() != 0) {
             List<Ticket> aux = ticketService.getByEvent(event_name);
@@ -58,7 +58,11 @@ public class EventController {
                 ticketService.save(aux.get(i));
             }
         }
-        eventService.deleteEvent(eventService.getByName(event_name).get(0));
+        if (!(name.equals(event_name))){
+            Event aux = eventService.getByName(event_name).get(0);
+            eventService.deleteEvent(aux);
+        }
+        eventService.save(event);
 
         model.addAttribute("name", name);
         model.addAttribute("description", description);
