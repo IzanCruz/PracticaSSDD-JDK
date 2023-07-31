@@ -58,7 +58,8 @@ public class EventController {
                 ticketService.save(aux.get(i));
             }
         }
-        eventService.deleteEvent(eventService.getByName(event_name).get(0));
+        if (!(name.equals(event_name))){
+        eventService.deleteEvent(eventService.getByName(event_name).get(0));}
 
         model.addAttribute("name", name);
         model.addAttribute("description", description);
@@ -68,7 +69,7 @@ public class EventController {
 
     }
 
-    @GetMapping("/preEditEvent")
+    @GetMapping("/preEditEvent.html")
     public String preEditEvent(Model model) {
         model.addAttribute("sessions", eventService.findAllList());
         return "preEditEvent";
